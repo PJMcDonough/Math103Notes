@@ -2,8 +2,17 @@
 # Script by: Shane McDonough
 # 2022-01-24
 
+echo '% Index page for Math 105
+% Patrick McDonough for Prof. West' > index.md
+echo "% Last Updated: `date`" >> index.md
+echo "" >> index.md
+
 for file in `ls *.md`; do
+    [[ "$file" = 'index.md' ]] && continue
+    title=`sed -n '1s/%\(.*\)/\1/p' $file`
     out=${file%.*}.html
     pandoc -f markdown+pandoc_title_block $file -t html -o $out -s --mathjax
+    echo "#. [$title]($out)" >> index.md
 done
 
+pandoc -f markdown+pandoc_title_block index.md -t html -o index.html -s --mathjax
