@@ -2,7 +2,7 @@
 # Script by: Shane McDonough
 # 2022-01-24
 
-echo '% Index page for Math 105
+echo '% Notes For Math 105
 % Patrick McDonough for Prof. West' > index.md
 echo "% Last Updated: `date`" >> index.md
 echo "" >> index.md
