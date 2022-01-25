@@ -1,0 +1,9 @@
+#!/bin/sh
+# Script by: Shane McDonough
+# 2022-01-24
+
+for file in `ls *.md`; do
+    out=${file%.*}.html
+    pandoc -f markdown+pandoc_title_block $file -t html -o $out -s --mathjax
+done
+
