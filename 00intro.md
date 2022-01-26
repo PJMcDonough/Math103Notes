@@ -55,3 +55,6 @@ Three Truths and a Lie:
 3. Lie I'm a double major.
 4. True, I was going to fail, and I retook it at CSUCI.
 </details>
+
+A friendly reminder to show up. It will get you points in the class.
+There are some getting-to-know-you things. We also have a syllabus quiz, which you can take as many times as you would like.

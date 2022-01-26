@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Patrick McDonough for Prof. West" />
+  <meta name="dcterms.date" content="2022-01-26" />
+  <title>Functions and Notation §§1.1-2</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Functions and Notation §§1.1-2</h1>
+<p class="author">Patrick McDonough for Prof. West</p>
+<p class="date">2022-01-26</p>
+</header>
+<h1 id="what-is-a-function">What is a function</h1>
+<p>The goal of this exercise is to write this in conversational
+language, not just read an obtuse definition from the internet. A
+function is a relation (this has a technical mathematical definition,
+but we can thing of the common meaning here). A function has the
+property that something goes in and something goes out, the output is
+unique given the input. In mathematical writing, when we say that
+something has one of something we mean at least one. Otherwise, we say
+only or exactly. Note that given an output, the input does not need to
+be unique.</p>
+<h2 id="examples">Examples</h2>
+<ol class="example" type="1">
+<li>We can represent a relation using arrows from the inputs to the
+outputs. This is a common for functions.</li>
+<li>A relation from people to their birthdays is a function because each
+person has only one birthday. The relation from birthdays to people is
+not a function if people share a birthday.</li>
+<li>We can have tables</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>7</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" class="example" type="1">
+<li>We can also write this same function as a set of ordered pairs <span
+class="math inline">\(\{(7,4),(3,3),(11,4),(0,3)\}\)</span>.</li>
+<li>We can also represent functions as points on a graph i.e., an x-y
+plane. This gives us a way to check if a relation is a function: The
+vertical line test (VLT) i.e., if you have a graph of relation, then if
+and only if there is a vertical line which passes through more than one
+point in the relation, the relation is not a function.</li>
+<li>We also define some functions with mathematical equations. For
+example, consider the doubling function, <span
+class="math inline">\(f(x)=2x\)</span>. We call this function notation.
+The name of the function is <span class="math inline">\(f\)</span>, but
+we could use some other letter or group of letters if we wanted to. We
+can evaluate <span class="math inline">\(f(3)\)</span> by replacing each
+occurrence of x with <span class="math inline">\((3)\)</span>. This
+results in the value <span class="math inline">\(2(3)=6\)</span> not
+<span class="math inline">\(23\)</span>.</li>
+<li>For graphing see the professor’s notes.</li>
+<li>Given <span class="math inline">\(f(x) = x^2\)</span>, <span
+class="math inline">\(f(x+h)=(x+h)^2=x^2+2xh+h^2\)</span>. Remember the
+parentheses. It’s not <span class="math inline">\(x+h^2\)</span>.</li>
+</ol>
+<h1 id="domain-and-range">Domain and Range</h1>
+<h2 id="interval-and-set-builder-notation">Interval and set builder
+Notation</h2>
+<p>See page 23 of the PDF version of the text for lots of examples of
+interval notation. An interval can be written as <span
+class="math inline">\((a,b)\)</span>, <span
+class="math inline">\((a,b]\)</span>, <span
+class="math inline">\([a,b)\)</span>, or <span
+class="math inline">\([a,b]\)</span>. The curly parentheses indicate
+<span class="math inline">\(&gt;\)</span> and the square indicate <span
+class="math inline">\(\ge\)</span>. We also refer to these as exclusive
+and inclusive respectively</p>
+<h2 id="finding-domain">Finding Domain</h2>
+<p>The domain is the set of all valid inputs. Consider <span
+class="math inline">\(g(x)=\frac{x+1}{x-3}\)</span>. Dividing by zero is
+not defined, but dividing zero by a number other than zero is defined.
+The function <span class="math inline">\(g\)</span> is not defined for
+<span class="math inline">\(3\)</span> because if <span
+class="math inline">\(x-3=0\)</span> then <span
+class="math inline">\(x=3\)</span>. This means that <span
+class="math inline">\(3\)</span> is not in the domain. All other real
+numbers are in the domain. We say the domain is all real numbers except
+<span class="math inline">\(3\)</span>, or, in interval notation, <span
+class="math inline">\((-\infty,3)\cup(3,\infty)\)</span>.</p>
+<p>Consider <span class="math inline">\(h(x)=\sqrt{4-x}\)</span>. The
+domain is given by the inequality <span class="math inline">\(4-x\ge
+0\)</span>. This is because of the square root. Solving gives <span
+class="math inline">\(x\le 4\)</span> and in interval notation this is
+<span class="math inline">\((-\infty,4]\)</span>.</p>
+<h2 id="common-restrictions-on-domain">Common restrictions on
+domain</h2>
+<ol type="1">
+<li>Dividing by zero.</li>
+<li>Even root (e.g. square root) of a negative number.</li>
+<li>Common sense application-related issues e.g., age can never be
+negative.</li>
+<li>Logarithms of non-positive numbers</li>
+</ol>
+</body>
+</html>
