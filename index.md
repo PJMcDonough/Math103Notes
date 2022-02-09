@@ -1,6 +1,6 @@
 % Notes For Math 105
 % Patrick McDonough for Prof. West
-% Last Updated: Wed Feb  9 09:57:51 PST 2022
+% Last Updated: Wed Feb  9 11:49:15 PST 2022
 
 <ol start=0>
 
@@ -11,3 +11,4 @@
 <li> [ Transformations](04transformations.html)
 <li> [ Absolute Value §1.6](05abs.html)
 <li> [ Inverse functions §1.7](06inverse.html)
+<li> [ Linear functions§ 2.1](07linearfn.html)

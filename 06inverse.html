@@ -5,7 +5,6 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Patrick McDonough for Prof. West" />
-  <meta name="dcterms.date" content="2022-02-07" />
   <title>Inverse functions §1.7</title>
   <style>
     html {
@@ -157,7 +156,7 @@
 <header id="title-block-header">
 <h1 class="title">Inverse functions §1.7</h1>
 <p class="author">Patrick McDonough for Prof. West</p>
-<p class="date">2022-02-07</p>
+<p class="date">2022-02-07 - 2022-02-09</p>
 </header>
 <p>It makes sense mnemonically to think of these of these as undoing
 functions. Consider the function <span
@@ -166,18 +165,90 @@ function. To undo it, we use the undoubling function. When we want to
 notate an inverse function of <span class="math inline">\(f\)</span> we
 write <span class="math inline">\(f^{-1}\)</span>. So, we have <span
 class="math inline">\(f^{-1}(x)=\frac{1}{2}\)</span>. Graphically we can
-think of this as reflecting about the</p>
-<p>Condiser the following method for finding the function <span
+think of this as reflecting about the line <span
+class="math inline">\(y=x\)</span>.</p>
+<p>Consider the following method for finding the function <span
 class="math inline">\(f^{-1}\)</span> given <span
 class="math inline">\(f\)</span>.</p>
 <ol type="1">
 <li>Replace <span class="math inline">\(f(x)\)</span> with <span
 class="math inline">\(y\)</span></li>
-<li>Swap <span class="math inline">\(x\)</span> aned <span
+<li>Swap <span class="math inline">\(x\)</span> and <span
 class="math inline">\(y\)</span>.</li>
 <li>Solve for <span class="math inline">\(y\)</span></li>
 <li>Replace <span class="math inline">\(y\)</span> with <span
 class="math inline">\(f^{-1}(x)\)</span></li>
 </ol>
+<p>There is an important note about this notation. We have <span
+class="math inline">\(x^{-1}=\frac{1}{x}\)</span>, but as a general
+rule, <span class="math inline">\(f^{-1}(x)\ne \frac{1}{f(x)}\)</span>.
+For that meaning, write <span
+class="math inline">\(\left(f(x)\right)^{-1}=\frac{1}{f(x)}\)</span>.</p>
+<p>To check if <span class="math inline">\(f\)</span> and <span
+class="math inline">\(g\)</span> are inverses, verify that for all <span
+class="math inline">\(x\)</span> that <span
+class="math inline">\(f(g(x))=g(f(x))=x\)</span>. Consider <span
+class="math inline">\(f=2x\)</span>, <span
+class="math inline">\(g=\frac{1}{2}x\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+f(g(x))&amp;=&amp;f(\frac{1}{2}x)\\
+&amp;=&amp;2(\frac{1}{2}x)\\
+&amp;=&amp;x\\
+g(f(x))&amp;=&amp;g(2x)\\
+&amp;=&amp;\frac{1}{2}(2x)\\
+&amp;=&amp;x\\
+\end{align}
+\]</span></p>
+<p>We have verified that these are inverses.</p>
+<p>We have a function to convert from °F to °C. It’s <span
+class="math inline">\(C(x)= \frac{5}{9}(x-32)\)</span>. We want to find
+the function to go the other way. For the example of 20°C, we could
+write</p>
+<p><span class="math display">\[
+\begin{align}
+20&amp;=\frac{5}{9}(x-32)\\
+20&amp;=\frac{5}{9}(x)-\frac{160}{9}\\
+20+\frac{160}{9}&amp;=\frac{5}{9}(x)\\
+\frac{9}{5}(20+\frac{160}{9})&amp;=x\\
+\frac{180}{5}+ \frac{160}{5}&amp;=x\\
+36+32x&amp;=x\\
+x&amp;=68\\
+\end{align}
+\]</span></p>
+<p>More generally, we can do this as</p>
+<p><span class="math display">\[
+\begin{align}
+C(x)&amp;=\frac{5}{9}(x-32)\\
+y&amp;=\frac{5}{9}(x-32)\\
+x&amp;=\frac{5}{9}(y-32)\\
+x&amp;=\frac{5}{9}y-\frac{160}{9}\\
+x+\frac{160}{9}&amp;=\frac{5}{9}y\\
+\frac{9}{5}(x+\frac{160}{9})&amp;=y\\
+\frac{9}{5}x+32&amp;=y\\
+C^{-1}(x)&amp;=\frac{9}{5}x+32\\
+\end{align}
+\]</span></p>
+<p>We can verify the inverse we just calculated as <span
+class="math inline">\(C^{-1}(C(x))=C^{-1}(\frac{5}{9}(x-32))=\frac{9}{5}(\frac{5}{9}(x-32)+32=
+x-32+32=x\)</span> and perform a similar calculation to verify <span
+class="math inline">\(C(C^{-1}(x))=x\)</span> Also note that the inverse
+<span class="math inline">\(C^{-1}\)</span> can be used to reproduce the
+result we got in the algebra above</p>
+<p>A function is an inverse of some other function if and only if it is
+one to one. We define one-to-one functions by the condition different
+inputs have different outputs. The function <span
+class="math inline">\(f(x)=x^2\)</span> over the domain of the real
+numbers is not one to one because <span
+class="math inline">\(f(1)=f(-1)=1\)</span>. One-to-one functions that
+are hard to reverse are important to cryptography, which is an
+incredibly economically important field. It’s based on number theory, an
+area of math which was, at one point, famous for having no commercial
+applicability.</p>
+<p>The origami method for inverting a function is a neat visual way to
+do it. The basic idea is that inverting a function is the same thing as
+reflecting it across the line <span class="math inline">\(y=x\)</span>.
+By making a fold along this line, we can invert the function. I have
+provided a <a href="https://www.desmos.com/calculator/ur1a4twnmt">Desmos
+example</a> of how this works.</p>
 </body>
 </html>

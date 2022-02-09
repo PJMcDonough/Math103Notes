@@ -21,4 +21,3 @@ Consider an arbitrary function $f(x)$ and some arbitrary constant number $k$.
 Note that for some transformations, the $k$ is outside the $()$, and for others, it's inside.
 The professor provides a bunch of examples in his video, that I can't reproduce here.
 
-office #2803 Bell tower by mail room.

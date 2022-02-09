@@ -58,3 +58,7 @@ Three Truths and a Lie:
 
 A friendly reminder to show up. It will get you points in the class.
 There are some getting-to-know-you things. We also have a syllabus quiz, which you can take as many times as you would like.
+
+The professor's office is #2803 Bell tower by mail room.
+
+Thing can be turned in late for a 25% penalty, but not if you go into practice mode (which gives the answers)!
