@@ -5,7 +5,6 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Patrick McDonough for Prof. West" />
-  <meta name="dcterms.date" content="2022-01-26" />
   <title>Functions and Notation §§1.1-2</title>
   <style>
     html {
@@ -157,7 +156,7 @@
 <header id="title-block-header">
 <h1 class="title">Functions and Notation §§1.1-2</h1>
 <p class="author">Patrick McDonough for Prof. West</p>
-<p class="date">2022-01-26</p>
+<p class="date">2022-01-26 – 2022-01-31</p>
 </header>
 <h1 id="what-is-a-function">What is a function</h1>
 <p>The goal of this exercise is to write this in conversational
@@ -226,6 +225,23 @@ results in the value <span class="math inline">\(2(3)=6\)</span> not
 class="math inline">\(f(x+h)=(x+h)^2=x^2+2xh+h^2\)</span>. Remember the
 parentheses. It’s not <span class="math inline">\(x+h^2\)</span>.</li>
 </ol>
+<h2 id="evaluation-vs-solving">Evaluation vs solving</h2>
+<p>Evaluating a function for some input means determining the output of
+the function for the input. Solving is a different operation. It refers
+to the use of algebraic operations to find the value of some
+variable.</p>
+<p>Take for example <span class="math inline">\(p(x)=x^2+2x\)</span>. We
+can evaluate <span class="math inline">\(p(3)\)</span> by substituting
+giving <span class="math inline">\(p(3)=(3)^2+2(3)=9+6=15\)</span>. To
+solve <span class="math inline">\(p(x)=3\)</span>, we first substitute
+in the definition of <span class="math inline">\(p(x)\)</span>. <span
+class="math display">\[x^2+2x=3\]</span> <span
+class="math display">\[x^2+2x-3=0\]</span> <span
+class="math display">\[(x+3)(x-1)=0\]</span> Then by the zero product
+property, either <span class="math inline">\(x+3=0\)</span> or <span
+class="math inline">\(x-1=0\)</span>. We get two solutions <span
+class="math inline">\(x=-3\)</span> and <span
+class="math inline">\(x=1\)</span>.</p>
 <h1 id="domain-and-range">Domain and Range</h1>
 <h2 id="interval-and-set-builder-notation">Interval and set builder
 Notation</h2>
@@ -235,9 +251,13 @@ class="math inline">\((a,b)\)</span>, <span
 class="math inline">\((a,b]\)</span>, <span
 class="math inline">\([a,b)\)</span>, or <span
 class="math inline">\([a,b]\)</span>. The curly parentheses indicate
-<span class="math inline">\(&gt;\)</span> and the square indicate <span
-class="math inline">\(\ge\)</span>. We also refer to these as exclusive
-and inclusive respectively</p>
+<span class="math inline">\(&gt;\)</span> and the square brackets
+indicate <span class="math inline">\(\ge\)</span>. We also refer to
+these as exclusive and inclusive respectively. Do not use <span
+class="math inline">\([-\infty\)</span> or <span
+class="math inline">\(\infty]\)</span>. This doesn’t make sense here.
+Instead we need to use <span class="math inline">\((-\infty\)</span> or
+<span class="math inline">\(\infty)\)</span>.</p>
 <h2 id="finding-domain">Finding Domain</h2>
 <p>The domain is the set of all valid inputs. Consider <span
 class="math inline">\(g(x)=\frac{x+1}{x-3}\)</span>. Dividing by zero is
@@ -250,13 +270,13 @@ class="math inline">\(3\)</span> is not in the domain. All other real
 numbers are in the domain. We say the domain is all real numbers except
 <span class="math inline">\(3\)</span>, or, in interval notation, <span
 class="math inline">\((-\infty,3)\cup(3,\infty)\)</span>.</p>
-<p>Consider <span class="math inline">\(h(x)=\sqrt{4-x}\)</span>. The
+<p>Consider <span class="math inline">\(h(x)=\sqrt{4-x}\)</span>. Its
 domain is given by the inequality <span class="math inline">\(4-x\ge
 0\)</span>. This is because of the square root. Solving gives <span
 class="math inline">\(x\le 4\)</span> and in interval notation this is
 <span class="math inline">\((-\infty,4]\)</span>.</p>
-<h2 id="common-restrictions-on-domain">Common restrictions on
-domain</h2>
+<h3 id="common-restrictions-on-domain">Common restrictions on
+domain</h3>
 <ol type="1">
 <li>Dividing by zero.</li>
 <li>Even root (e.g. square root) of a negative number.</li>
@@ -264,5 +284,64 @@ domain</h2>
 negative.</li>
 <li>Logarithms of non-positive numbers</li>
 </ol>
+<h2 id="finding-range">Finding Range</h2>
+<p>Consider <span class="math inline">\(f(x)=x^2\)</span>. Its domain is
+all real numbers by the above checklist. Finding the range takes more
+work. We start by letting <span class="math inline">\(y=f(x)\)</span>.
+Then we almost solve for <span class="math inline">\(x\)</span>. <span
+class="math display">\[y=x^2\]</span> <span
+class="math display">\[\sqrt{y}=\sqrt{x^2}\]</span> <span
+class="math display">\[\sqrt{y}=\pm x\]</span> Now we treat <span
+class="math inline">\(y\)</span> as the independent variable. By using
+the checklist above on restrictions on domain, we can see that the only
+restriction is <span class="math inline">\(y\ge 0\)</span>. This is in
+fact the <em>range</em> of <span class="math inline">\(f\)</span>. This
+can also be done by graphing using <a
+href="https://www.desmos.com/calculator">desmos</a>.</p>
+<h1 id="reading-graphs">Reading graphs</h1>
+<p>Given a graph of <span class="math inline">\(f(x)\)</span>, to
+evaluate the function, we can find the <span
+class="math inline">\(y\)</span>-coordinate of the point on the curve at
+the given <span class="math inline">\(x\)</span>-value. We can also
+solve e.g., <span class="math inline">\(f(x)=3\)</span>, by finding the
+<span class="math inline">\(x\)</span>-coordinates corresponding to a
+<span class="math inline">\(y\)</span>-coordinate of <span
+class="math inline">\(3\)</span>.</p>
+<h1 id="common-functions">Common functions</h1>
+<p>Take a look at your book for some common functions and their
+graphs.</p>
+<ul>
+<li>Setting <span class="math inline">\(f(x)\)</span> to some constant
+gives a constant function e.g., <span
+class="math inline">\(f(x)=3\)</span>, and It’s graph is a horizontal
+line.</li>
+<li>The identity function is <span class="math inline">\(f(x)=x\)</span>
+and its graph a <span class="math inline">\(45°\)</span> line passing
+through the origin.</li>
+<li>The absolute value function is <span
+class="math inline">\(f(x)=\vert x \vert\)</span> and its graph is a
+V-shape.</li>
+<li>Quadratic functions are U shaped and possibly inverted</li>
+<li>The Cubic function are like the quadratic be it also have a <span
+class="math inline">\(x^3\)</span> term. In particular chicane</li>
+<li>Reciprocal has a vertical and a horizontal asymptote</li>
+<li>The square root function is only in the first quadrant. Domain and
+range</li>
+<li>Cube root function first and third quadrants. Domain and range.
+(also <span class="math inline">\(x^\frac{1}{3}\)</span> chicane</li>
+</ul>
+<h2 id="piecewise-functions">Piecewise functions</h2>
+<p><span class="math display">\[
+f(x)=
+\begin{cases}
+x^2 &amp; x&gt;1\\
+2x &amp; x \le 1\\
+\end{cases}
+\]</span> In Desmos, these can be graphed using separate formulas for
+each piece in the piecewise function. The formulas for Desmos are <span
+class="math inline">\(y=x^2\{x&gt;1\}\)</span> and <span
+class="math inline">\(y=2x\{x\le 1\}\)</span>.</p>
+<p>Piecewise functions have practical applications. Take for example a
+price listed as $2.59, or for quantities of 4 or more $1.99.</p>
 </body>
 </html>
