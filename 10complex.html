@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Patrick McDonough for Prof. West" />
+  <title>Complex Numbers §3.1</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Complex Numbers §3.1</h1>
+<p class="author">Patrick McDonough for Prof. West</p>
+<p class="date">2022-02-14 – 2022-02-21</p>
+</header>
+<h1 id="backstory">Backstory</h1>
+<p>The exact order of events here is not completely accurate, but it is
+instructive. In the beginning, we just had counting numbers: 1, 2, 3, 4,
+5. Then they invented 0 and thought, hey this is just as much of a
+number as those other numbers. Then people invented things like debt and
+decided to describe things with negative numbers. Then the Egyptians
+decided they needed to describe how much bread each person gets if you
+divide two loaves of bread among three people. Then irrational numbers.
+A cult called the Pythagorean lead by Pythagoras believed that all
+numbers were rational, but then someone proved that <span
+class="math inline">\(\sqrt 2\)</span> is irrational. They drowned
+him.</p>
+<h1 id="imaginary-numbers">Imaginary numbers</h1>
+<p>So people invented the number <span class="math inline">\(i=\sqrt
+1\)</span> which made math easier, and like many of the inventions
+before it, still follows the rules of math. The number <span
+class="math inline">\(i\)</span> is sometimes called the imaginary unit.
+You may find it interesting to hear that the reason imaginary numbers
+were created to find <em>real</em> solutions to equations of the for
+<span class="math inline">\(ax^3+bx^2+cx+d=0\)</span> In some ways,
+imaginary numbers are more real than real numbers because physics simply
+requires it. Complex numbers “all” numbers. They can be written with
+real <span class="math inline">\(a\)</span> and <span
+class="math inline">\(b\)</span> in the form <span
+class="math inline">\(a+bi\)</span>. Consider for example <span
+class="math inline">\(7=7+0i\)</span> and <span
+class="math inline">\(i=0+1i\)</span>.</p>
+<h1 id="operations">Operations</h1>
+<p>Consider the following examples of operations <span
+class="math display">\[\sqrt{-16}=\sqrt{-1}\sqrt{16}=i4=4i\]</span>.
+Adding two complex numbers works just like combining like terms. In
+fact, it is combining like terms. <span
+class="math display">\[(2+3i)+(5-7i)= (2+5)+(3-7)i =7-4i\]</span>. The
+same can be said of subtracting. <span class="math display">\[
+\begin{align}
+(3+2i)-(2-i)&amp;=(3-2)+(2+1)i\\
+&amp;=1+3i
+\end{align}\]</span> Multiplication is done by FOILing just like if you
+are multiplying <span class="math inline">\((1+x)\)</span>+<span
+class="math inline">\((1-x)\)</span> except that we know <span
+class="math inline">\(i^2=-1\)</span>. <span class="math display">\[
+\begin{align}
+(2+5i)(3-2i)&amp;=2(3)+2(-2i)+5i(3)+5i(-2i)\\
+&amp;=6-4i+15i-10i^2\\
+&amp;=6-4i+15i+10\\
+&amp;=16+11i\\
+\end{align}
+\]</span></p>
+<p>We can show by FOILing that for any two constants <span
+class="math inline">\(a\)</span> and <span
+class="math inline">\(b\)</span>, <span
+class="math inline">\((a+bi)(a-bi)=a^2+b^2\)</span>. Any two numbers of
+the form <span class="math inline">\(a+bi\)</span>, and <span
+class="math inline">\(a-bi\)</span> are called complex conjugates. Note
+that the only difference is the sign in the middle. To find the
+conjugate of a complex number written as <span
+class="math inline">\(a+bi\)</span>, rewrite it as <span
+class="math inline">\(a-bi\)</span>, or vice versa. This comes from a
+difference of squares, which results in the fact that the product of a
+complex number and its conjugate is real. The coefficients <span
+class="math inline">\(a\)</span> and <span
+class="math inline">\(b\)</span> may well be zero, so real numbers are
+there own conjugates and <span class="math inline">\(\frac 23 i\)</span>
+and <span class="math inline">\(-\frac 23i\)</span> are conjugates. When
+one of the coefficient’s is <span class="math inline">\(0\)</span>, we
+often don’t write that term.</p>
+<p>Division is more complicated, but not terribly so. To divide <span
+class="math inline">\(2+5i\)</span> by <span
+class="math inline">\(4-i\)</span>, we proceed as follows. <span
+class="math display">\[
+\begin{align}
+\frac{2+5i}{4-i}&amp;= \frac{2+5i}{4-i}\cdot \frac{4+i}{4+i}
+&amp;=\frac{(2+5i)(4+i)}{(4-i)(4+i)}
+&amp;=\frac{8+2i+20i-5}{4^2-i^2}
+&amp;=\frac{3+22i}{17}
+&amp;=\frac 3{17}+\frac{22}{17}i
+\end{align}
+\]</span></p>
+<p>Recall that any nonzero real number raised to the 0th power is 1.
+This actually holds for all complex numbers. Similarly recall that any
+real number to the 1st power is that number. This also holds for all
+complex number. Similarly just like for real numbers, for any complex
+<span class="math inline">\(x,y,z\)</span>, <span
+class="math inline">\(x^yx^z=x^{y+z}\)</span> and <span
+class="math inline">\((x^y)^z=x^{yz}\)</span>.</p>
+<p>See the following table, and note that it repeats. The left and right
+columns are equal.</p>
+<p>|i^0| 1| |i^1| i| |i^2| -1| |i^3| -i| |i^4| 1| |i^5| i| |i^6| -1|
+|i^7| -i|</p>
+<p>Because of the above we know <span
+class="math inline">\(i^{2001}=(i^4)^{500}i=1^4i=i\)</span>. You can
+also do this by saying 4 goes into 2001 500 times with a remainder of 1.
+Only the remainder matters here, and we simply raise <span
+class="math inline">\(i\)</span> to that power.</p>
+</body>
+</html>

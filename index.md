@@ -1,6 +1,6 @@
 % Notes For Math 105
 % Patrick McDonough for Prof. West
-% Last Updated: Mon Feb 14 12:12:27 PST 2022
+% Last Updated: Mon Feb 21 12:09:34 PST 2022
 
 <ol start=0>
 
@@ -13,4 +13,6 @@
 <li> [ Inverse functions §1.7](06inverse.html)
 <li> [ Linear functions §2.1](07linearfn.html)
 <li> [ Graphing §2.2](08graphing.html)
-<li> [ Modelling §2.2](09modeling.html)
+<li> [ Modelling §§2.2-3.3](09modeling.html)
+<li> [ Complex Numbers §3.1](10complex.html)
+<li> [ Quadratics §3.2](11quadratic.html)
