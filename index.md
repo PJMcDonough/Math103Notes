@@ -1,6 +1,6 @@
 % Notes For Math 105
 % Patrick McDonough for Prof. West
-% Last Updated: Mon Feb 21 12:09:34 PST 2022
+% Last Updated: Wed Feb 23 11:48:25 PST 2022
 
 <ol start=0>
 
@@ -16,3 +16,4 @@
 <li> [ Modelling §§2.2-3.3](09modeling.html)
 <li> [ Complex Numbers §3.1](10complex.html)
 <li> [ Quadratics §3.2](11quadratic.html)
+<li> [ Polynomials and Power functions  §§3.4-3.4](12polypow.html)

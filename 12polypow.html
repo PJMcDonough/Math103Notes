@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Patrick McDonough for Prof. West" />
+  <meta name="dcterms.date" content="2022-02-21" />
+  <title>Polynomials and Power functions §§3.4-3.4</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Polynomials and Power functions §§3.4-3.4</h1>
+<p class="author">Patrick McDonough for Prof. West</p>
+<p class="date">2022-02-21</p>
+</header>
+<p>Power functions are functions fo the form <span
+class="math inline">\(f(x)=Kx^p\)</span>. A power function has only one
+term. An geometrical aplication of power functinos is the volume of a
+sphere: <span class="math inline">\(V(r)=\frac 43 \pi r^3\)</span>. In
+this case the coeficient is <span class="math inline">\(\frac 43
+\pi\)</span>. The following are also power functions. <span
+class="math display">\[
+f(x) = 1\quad
+f(x) = x\quad
+f(x) = x^2\quad
+f(x) = \frac 1x\quad
+f(x) = \frac 1{x^2}\quad
+f(x) = \sqrt x\quad
+\]</span> Recall that <span
+class="math inline">\(\sqrt{x}=\sqrt[2]{x}\)</span>, and <span
+class="math inline">\(\sqrt[n]{x}=x^{\frac 1n}\)</span>. The mnemonic
+for this is that power rhymes with flower, and both go above as opposed
+to roots which go below. Also recall that <span
+class="math inline">\(x^{-n}=\frac 1{x^n}\)</span>. We can rewrite the
+above as follows. <span class="math display">\[
+f(x) = 1x^0\quad
+f(x) = 1x^1\quad
+f(x) = 1x^2\quad
+f(x) = 1x^{-1}\quad
+f(x) = 1x^{-2}\quad
+f(x) = 1x^\frac 12\quad
+\]</span></p>
+<p>Consider the functions <span
+class="math inline">\(f(x)=-2x^6-x^5+3x^4+x^3\)</span> and <span
+class="math inline">\(g(x)=3x^5-4x^4+2x^2+1\)</span>. The leading term
+is known as the term with the highest exponent. The coefficient of the
+leading term is called the leading coefficient. Constants are zeroth
+degree terms.</p>
+<p>As <span class="math inline">\(x\)</span> gets a large positive
+value, the value of a polynomial will become large and take a sign
+according to part before the slash in the following chart. The sign
+after the slash indicates what happens when given a large negative
+value.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>even degree</th>
+<th>odd degree</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LT (+)</td>
+<td>+/+</td>
+<td>+/-</td>
+</tr>
+<tr class="even">
+<td>LT (-)</td>
+<td>-/-</td>
+<td>-/+</td>
+</tr>
+</tbody>
+</table>
+<p>As the absolute value of the input to the polynomial gets larger, all
+the terms except for the leading term start to have a relatively smaller
+effect on the output. Here’s why. When we factor <span
+class="math inline">\(x^5\)</span> out of <span
+class="math inline">\(g(x)\)</span>, we get <span
+class="math inline">\(g(x)=x^5(3-\frac 4x+\frac
+2{x^3}+\frac1{x^5})\)</span>. As <span
+class="math inline">\(x\rightarrow\infty\)</span>, <span
+class="math inline">\((3-\frac 4x+\frac 2{x^3}+\frac1{x^5})\rightarrow
+3\)</span>. What this fancy math notation means is that all of <span
+class="math inline">\(\frac 1{x^n}\)</span> terms become very close to
+zero, so the bit in parentheses, in some sense for large <span
+class="math inline">\(x\)</span>, may as well be three. A similar
+argument works for very negative x.</p>
+<p>We can see from the chart that <span class="math inline">\(f\)</span>
+goes down to the right and down to the left, whereas <span
+class="math inline">\(g\)</span> goes up on the right and down on the
+left.</p>
+<h1 id="graphing-polynomials">Graphing Polynomials</h1>
+<p>Consider <span class="math inline">\(f(x)=-3x^2(x-1)(x+4)\)</span>.
+For the <span class="math inline">\(y\)</span>-intercept, set <span
+class="math inline">\(x=0\)</span> and find <span
+class="math inline">\(y\)</span>. In this case, that’s just <span
+class="math inline">\(f(0)=0\)</span>. We can also find our <span
+class="math inline">\(x\)</span> intercepts by setting <span
+class="math inline">\(f(x)=0\)</span>. Since <span
+class="math inline">\(f\)</span> is given in factored form, we can read
+off the x coordinates of the x intercepts. They are <span
+class="math inline">\(0,1,-4\)</span>. Since we are multiplying a second
+degree polynomial by two first degree polynomials, we get a polynomial
+with degree <span class="math inline">\(2+1+1=4\)</span>. If we really
+wanted to we could show this by explicitly multiplying. From this, and
+the sign, we can see the end behavior is down on both sides (see above
+chart).</p>
+<p>When we write out a polynomial in a factored form and we have <span
+class="math inline">\(n\)</span> copies of a given term, we way that
+term has multiplicity <span class="math inline">\(n\)</span>. The root
+<span class="math inline">\(0\)</span> has multiplicity <span
+class="math inline">\(2\)</span> and the roots <span
+class="math inline">\(1\)</span> and <span
+class="math inline">\(-4\)</span> have multiplicity <span
+class="math inline">\(1\)</span>. Consider an function of the form <span
+class="math inline">\(f(x)=(x-k)^np(x)\)</span> where <span
+class="math inline">\(p\)</span> is a polynomial with no roots near
+<span class="math inline">\(k\)</span>. Then near <span
+class="math inline">\(k\)</span>, <span
+class="math inline">\(f(x)\)</span> is small, and all values of <span
+class="math inline">\(p(x)\)</span> near zero are, for purposes of
+multiplication near-enough to constant. Therefore, we can treat <span
+class="math inline">\(f\)</span> in this area as a polynomial and use
+the above table to note that for odd multiplicity, <span
+class="math inline">\(f\)</span> crosses the <span
+class="math inline">\(x\)</span>-axis, and even multiplicity it bounces
+off it. We can use this to draw all the crossings.</p>
+</body>
+</html>
