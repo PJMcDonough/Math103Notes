@@ -1,6 +1,6 @@
 % Polynomials and Power functions  §§3.4-3.4
 % Patrick McDonough for Prof. West
-% 2022-02-21
+% 2022-02-21 -- 2022-02-28
 
 Power functions are functions fo the form $f(x)=Kx^p$. A power function has only one term. 
 An geometrical aplication of power functinos is the volume of a sphere: $V(r)=\frac 43 \pi r^3$.
@@ -66,3 +66,24 @@ Consider an function of the form $f(x)=(x-k)^np(x)$ where $p$ is a polynomial wi
 Then near $k$, $f(x)$ is small, and all values of $p(x)$ near zero are, for purposes of multiplication near-enough to constant. 
 Therefore, we can treat $f$ in this area as a polynomial and use the above table to note that for odd multiplicity, $f$ crosses the $x$-axis, and even multiplicity it bounces off it.
 We can use this to draw all the crossings.
+
+A turning point is a point in a graph where it goes from sloping up to down or vice versa.
+Math-By-Fives refers to these as wiggles. 
+You may also hear them referred to as whoopty-doos.
+These are not standard terminology.
+The maximum number of turning points is one less than the degree of the polynomial.
+We can restate this using algebra as the minimum possible degree of a polynomial given a graph is one more than the number of turning points.
+Note that this is an inequality.
+The fourth degree polynomial $f(x)=x^4+17$ has exactly 
+
+We have some step-by-step instructions for graphing polynomial.
+
+1. Find $x$- and $y$-intercepts. To find the $x$-intercept solve for $y$ and
+   vice versa.
+2. Check for symmetry. If $f(x)=f(-x)$, there is a vertical line of mirror
+   symmetry. You can use this to check your work, or you can decide to only do
+   one side and then mirror it. You could skip this step if you really wanted to
+3. Find the multiplicity of the zeros. Remember odd multiplicity goes through
+   and even multiplicity bounces.
+4. End behavior can be determined from degree and coefficient of lead term. See the above table.
+5. Check the number of turning points. If the number of turning points is not less than the degree of the polynomial, you have made an error.
