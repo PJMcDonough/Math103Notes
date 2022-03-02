@@ -59,11 +59,11 @@ So we can factor this as $f(x)=(x+\frac 12)(4x^2-2x-2)$. We simplify this to $$p
 
 A final example:
 $$\begin{align}
-x^2+1&=0
-x^2&=-1
-x&=\pm\sqrt{-1}
-x&=\pm i
-x^2+1&=(x-i)(x+i)
+x^2+1&=0\\
+x^2&=-1\\
+x&=\pm\sqrt{-1}\\
+x&=\pm i\\
+x^2+1&=(x-i)(x+i)\\
 \end{align}$$
 
 In a polynomial with real coefficients, whenever you have a non-real zero, its conjugate is also a zero. In other words for real $a,b$, if $a+bi$ is a zero, so is $a-bi$.
