@@ -6,6 +6,7 @@ There will be a test on Wednesday March 9, and a practice test the preceding Mon
 You can bring a 3"x5" index card with notes to the Test.
 You may also bring a **five-function** calculator.
 The calculator should not be able to perform any math other than addition subtraction multiplication division and roots.
+The test will be on everything before §3.5, and also section §3.7.
 
 # Intermediate Value Theorem
 This is normally covered in calculus, but we provide a reasonable summary of it here.

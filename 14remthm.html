@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Patrick McDonough for Prof. West" />
+  <meta name="dcterms.date" content="2022-01-03" />
+  <title>Remainder Theorem</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Remainder Theorem</h1>
+<p class="author">Patrick McDonough for Prof. West</p>
+<p class="date">2022-01-03</p>
+</header>
+<p><strong>Remainder Theorem:</strong> Given a given polynomial <span
+class="math inline">\(p(x)\)</span> divided by <span
+class="math inline">\(x-k\)</span>, then the remainder is <span
+class="math inline">\(p(k)\)</span>.</p>
+<p>Consider <span class="math inline">\(p(x)= 6x^4-x^3+x^2-7\)</span>.
+We would like to know if <span class="math inline">\(x-2\)</span> is a
+factor. We can use synthetic division to find this out explicitly (which
+would be my preference) or we can do long division. In either case, we
+find that <span class="math inline">\(p(2)=85\)</span> and therefore,
+<span class="math inline">\(x-2\)</span> is not a factor. If we do the
+synthetic division, we find the quotient <span
+class="math inline">\(6x^3+11x^2+22x+46\)</span> along with the
+remainder <span class="math inline">\(85\)</span>. It is important to
+include the zero coefficient when we do the long division.</p>
+<p>We already know the special case for <span
+class="math inline">\(p(x)=0\)</span>. It’s called the Factor
+Theorem.</p>
+<p><strong>Factor Theorem:</strong> The number <span
+class="math inline">\(k\)</span> is a zero of <span
+class="math inline">\(p(x)\)</span> if and only if <span
+class="math inline">\(x-k\)</span> is a factor of <span
+class="math inline">\(p(x)\)</span>.</p>
+<p>The quadratic formula is relatively simple, but the cubic formula is
+more complicated, and the quartic formula is very complicated. There is
+no formula for higher order polynomial. The guy who found this out
+unfortunately died in a duel at age 19. Because of this, we have to
+resort to guessing, but we can do this somewhat intelligently.</p>
+<p><strong>Rational Root Theorem</strong> If a polynomial <span
+class="math inline">\(f(x)\)</span> with integer coefficients has
+rational roots (i.e. roots of the form <span class="math inline">\(\frac
+pq\)</span> with <span class="math inline">\(p,q\)</span> integers),
+then <span class="math inline">\(p\)</span> will be a factor of the
+trailing coefficient, and <span class="math inline">\(q\)</span> will be
+a factor of the leading coefficient.</p>
+<p>We continue with the polynomial <span class="math inline">\(p(x)=
+x^3-6x^2-x+30\)</span>. The factors of <span
+class="math inline">\(30\)</span> are <span class="math inline">\(\pm
+1\)</span>, <span class="math inline">\(\pm 2\)</span>, <span
+class="math inline">\(\pm 3\)</span>, <span class="math inline">\(\pm
+5\)</span>, <span class="math inline">\(\pm 6\)</span>, <span
+class="math inline">\(\pm 10\)</span>, <span class="math inline">\(\pm
+15\)</span>, <span class="math inline">\(\pm 30\)</span> and the factors
+of <span class="math inline">\(1\)</span> are <span
+class="math inline">\(\pm 1\)</span>. So we get possible factors of
+<span class="math inline">\(\frac{\pm 1}{\pm 1}\)</span>, <span
+class="math inline">\(\frac{\pm 2}{\pm 1}\)</span>, <span
+class="math inline">\(\frac{\pm 3}{\pm 1}\)</span>, <span
+class="math inline">\(\frac{\pm 5}{\pm 1}\)</span>, <span
+class="math inline">\(\frac{\pm 6}{\pm 1}\)</span>, <span
+class="math inline">\(\frac{\pm 10}{\pm 1}\)</span>, <span
+class="math inline">\(\frac{\pm 15}{\pm 1}\)</span>, <span
+class="math inline">\(\frac{\pm 30}{\pm 1}\)</span>. Because of the way
+the <span class="math inline">\(\pm\)</span>s work, we can rewrite this
+list as <span class="math inline">\(\pm 1\)</span>, <span
+class="math inline">\(\pm 2\)</span>, <span class="math inline">\(\pm
+3\)</span>, <span class="math inline">\(\pm 5\)</span>, <span
+class="math inline">\(\pm 6\)</span>, <span class="math inline">\(\pm
+10\)</span>, <span class="math inline">\(\pm 15\)</span>, <span
+class="math inline">\(\pm 30\)</span>. Trying <span
+class="math inline">\(3\)</span> gives <span
+class="math inline">\(p(3)=0\)</span>, and therefore, <span
+class="math inline">\(3\)</span> is a zero. By the way we did the
+synthetic division we get <span
+class="math inline">\(p(x)=(x-3)(x^2-3x-10)\)</span>. The quadratic is
+much easier to factor, giving <span
+class="math inline">\(p(x)=(x-3)(x-5)(x+2)\)</span>. This can get quite
+complicated if either the leading coefficient or trailing constant is
+highly divisible (e.g. 24 with positve integer factors of 1,2,3,5,6. On
+the test, they won’t be highly divisible, unlike at Moorpark
+college.</p>
+<p>Fun fact!: Ye olden mathematicians were regarded as philosophers,
+because people realized how philosophical math is. St. Thomas Aquinas
+was were we got our ideas of infinity from.</p>
+<p><strong>Descartes’ Rule of Signs:</strong> Given a polynomial written
+in descending order (the normal order), the number of sign-changes is
+the number of positive real zeros (or less by a multiple of two). To
+find the number of negative real zeros, substitute <span
+class="math inline">\(p(-x)\)</span> and apply the same rule.</p>
+<p>Descartes’ Rule of Signs can allow you to cut your work in half
+sometimes.</p>
+<p>Consider <span class="math inline">\(p(x)=x^3+6x^2+11x+6\)</span>.
+Note that there are no sign changes and therefore no positive roots, but
+for <span class="math inline">\(p(-x)=-x^3+6x^2-11x+6\)</span>. By
+Descartes’ rule of signs, there are either three negative roots of <span
+class="math inline">\(p\)</span>. To find the roots, by the above
+theorems, we only have to check <span class="math inline">\(-1\)</span>,
+<span class="math inline">\(-2\)</span>, <span
+class="math inline">\(-3\)</span>, and <span
+class="math inline">\(-6\)</span>. By synthetic division we get <span
+class="math inline">\(p(x)=(x+3)(x^2+3x+2)\)</span>. It turns out that
+three of the possible four guesses were right. You may be able to see
+that we can factor this as <span
+class="math inline">\(p(x)=(x+3)(x+2)(x+1)\)</span>. Graphing this is
+doable-enough.</p>
+<p><strong>Fundamental Theorem of Algebra:</strong> Any polynomial of
+degree <span class="math inline">\(n\)</span> can be factored as <span
+class="math inline">\((x-c_1)(x-c_2)\ldots(x-c_n)\)</span> where <span
+class="math inline">\(c_1,c_2\ldots c_n\)</span> are complex.
+Equivalently, counting multiplicity every <span
+class="math inline">\(n\)</span>th degree polynomial has exactly <span
+class="math inline">\(n\)</span> complex roots.</p>
+<p>Consider the polynomial <span
+class="math inline">\(f(x)=4x^3-3x-1\)</span>. We get rational root
+theorem values of <span class="math inline">\(p=\pm 1\)</span>, <span
+class="math inline">\(q=\pm 1,\pm 2,\pm 4\)</span>, and <span
+class="math inline">\(\frac pq = \pm 1, \pm \frac 12, \pm \frac
+14\)</span>. So we can factor this as <span
+class="math inline">\(f(x)=(x+\frac 12)(4x^2-2x-2)\)</span>. We simplify
+this to <span class="math display">\[p(x)=(x+\frac
+12)2(2x^2-x-1)=(2x+1)(2x^2-x-1)=(2x+1)^2(x-1).\]</span></p>
+<p>A final example: <span class="math display">\[\begin{align}
+x^2+1&amp;=0
+x^2&amp;=-1
+x&amp;=\pm\sqrt{-1}
+x&amp;=\pm i
+x^2+1&amp;=(x-i)(x+i)
+\end{align}\]</span></p>
+<p>In a polynomial with real coefficients, whenever you have a non-real
+zero, its conjugate is also a zero. In other words for real <span
+class="math inline">\(a,b\)</span>, if <span
+class="math inline">\(a+bi\)</span> is a zero, so is <span
+class="math inline">\(a-bi\)</span>. The multiplicities are also the
+same.</p>
+</body>
+</html>
