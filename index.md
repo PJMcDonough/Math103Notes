@@ -1,6 +1,6 @@
 % Notes For Math 105
 % Patrick McDonough for Prof. West
-% Last Updated: Wed Mar  2 15:16:12 PST 2022
+% Last Updated: Mon Mar  7 16:15:54 PST 2022
 
 <ol start=0>
 
@@ -19,3 +19,4 @@
 <li> [ Polynomials and Power functions  §§3.4-3.4](12polypow.html)
 <li> [ Upcoming Test](13test.html)
 <li> [ Remainder Theorem](14remthm.html)
+<li> [ Exam Prep](15prep.html)
