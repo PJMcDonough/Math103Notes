@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Patrick McDonough for Prof. West" />
+  <meta name="dcterms.date" content="2022-03-21" />
+  <title>Rational Funcionts (§3.7)</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Rational Funcionts (§3.7)</h1>
+<p class="author">Patrick McDonough for Prof. West</p>
+<p class="date">2022-03-21</p>
+</header>
+<p><strong>Definition:</strong> A rational function is a function of the
+form <span class="math inline">\(R(x)=\frac{P(x)}{Q(x)}\)</span> where
+<span class="math inline">\(P\)</span> and <span
+class="math inline">\(Q\)</span> are polynomials and <span
+class="math inline">\(Q(x)\ne 0\)</span>.</p>
+<p>Note that <span class="math inline">\(f(x) = \frac 1x\)</span> is a
+rational function because both <span class="math inline">\(1\)</span>
+and <span class="math inline">\(x\)</span> are polynomials because they
+are both monomials <span class="math inline">\(1x^0\)</span> and <span
+class="math inline">\(1x^1\)</span> respectively.</p>
+<p><strong>New notation:</strong> <span
+class="math inline">\(x\rightarrow a^{-}\)</span> means x gets closer
+from the negative (LH) side, <span class="math inline">\(x\rightarrow
+a^{+}\)</span> means x gets closer from the positive (RH) side <span
+class="math inline">\(x\rightarrow a\)</span> means x gets closer from
+both sides.</p>
+<p>If we continue to consder <span class="math inline">\(f(x)=\frac
+1x\)</span>, by plugging in progressively smaller values, we can come to
+the conclusion that, as <span class="math inline">\(x\rightarrow
+0^+\)</span> we have <span
+class="math inline">\(f(x)\rightarrow\infty\)</span>. Doing this for
+negative numbers gives if <span class="math inline">\(x\rightarrow
+0^-\)</span>, then <span
+class="math inline">\(f(x)\rightarrow-\infty\)</span>. Doing this
+yourself is instructive. We can also see that if <span
+class="math inline">\(x\rightarrow \pm\infty\)</span>, then <span
+class="math inline">\(f(x)\rightarrow 0\)</span>.</p>
+<p>We can also graph. This allows us to see that there are lines that
+the graph doesn’t touch but keeps getting closer to. These are called
+asymptotes. There are both vertical and horizontal asymptotes
+abbreviated VA and HA respectively. Functions have at most 2 HAs and
+rational functions have at most one HA, but a rational function my have
+any finite number of VAs, and some trig functions have infinitely many.
+Functions can cross horizontal, but not vertical asymptotes.</p>
+<p>#Rules for finding Asymptotes</p>
+<h2 id="vertical">Vertical</h2>
+<p>To find the VA of a rational function, factor the numerator and
+denominator:</p>
+<ol type="1">
+<li>Factor the numerator and denominator</li>
+<li>Note the domain restrictions of the function i.e., zeros of the
+denominator.</li>
+<li>Reduce the expression (cancel)</li>
+<li>The zeros of the new denominator are the <span
+class="math inline">\(x\)</span>-location of the VA.</li>
+</ol>
+<p><strong>Ex:</strong> Consider <span
+class="math inline">\(R(x)=\frac{x+2}{x^2-4}\)</span>.So, <span
+class="math display">\[\begin{align}
+R(x)=\frac{x+2}{x^2-4}\\
+R(x)=\frac{x+2}{(x+2)(x-2)} \text{Restrictions $x\ne \pm 2$}\\
+R(x)=\frac{1}{x-2}\\
+\end{align}\]</span> So,the equation of the VA is <span
+class="math inline">\(x=2\)</span>, and we have a removable
+discontinutiy (i.e., a hole in the graph) at <span
+class="math inline">\(x=-2\)</span>. The VA and HA divide the plane into
+four parts. You can plug in test values of <span
+class="math inline">\(x\)</span> on each side of the VA, and then note
+that it will usually hug both sides. We can check to see if the function
+goes through the line <span class="math inline">\(x=k\)</span>, we can
+simply solve <span class="math inline">\(R(x)=k\)</span>. In this case,
+we simply need to note that there are no zeros of the functions.</p>
+<h2 id="horizontal">Horizontal</h2>
+<ol type="1">
+<li>If the degree of the polynomial in the denominator is greater than
+the degree of the numerator, the HA is <span
+class="math inline">\(x=0\)</span> because the bottom grows faster than
+the top.</li>
+<li>If the degree of the polynomial in the denominator is equal to the
+degree of the numerator, the HA is <span
+class="math inline">\(x=\)</span> the ratio of the lead coefficients
+because the lead terms grow faster than other terms.</li>
+<li>If the degree of the polynomial in the denominator is one less than
+the degree of the numerator, you do not get a HA, but you <em>do</em>
+get a slant asymptote (also called oblique)</li>
+</ol>
+<p><strong>Example:</strong> Consider <span
+class="math display">\[R(x)=\frac{3x^2-2x+1}{x-1}\]</span> We get the
+slant asymptote <span class="math inline">\(y=3x+1\)</span>. This can be
+shown by long, or in this case synthetic, division.</p>
+<h1 id="reminders">Reminders</h1>
+<p>To find the <span class="math inline">\(y\)</span>-intercept, set
+<span class="math inline">\(x=0\)</span> and solve. To find the <span
+class="math inline">\(x\)</span>-intercept, set <span
+class="math inline">\(y=0\)</span> and solve. In the case of rational
+functions, to find zeros, we can find the zeros of the numerator and
+then exclude any values that end up being zeros of the denominator.</p>
+<p><strong>Example:</strong> Consider <span
+class="math display">\[R(x)=\frac{x^2-x-6}{x^2-16}\]</span> Find any VA,
+HA, <span class="math inline">\(y\)</span>-intercepts, and <span
+class="math inline">\(x\)</span>-intercepts.</p>
+<p><em>Hint:</em> factor.</p>
+<p><em>Solution:</em> We have</p>
+<p><span
+class="math display">\[R(x)=\frac{(x-3)(x+2)}{(x-4)(x+4)}\]</span></p>
+<p>The real of the denominator are <span class="math inline">\(\pm
+4\)</span>, so the domain is all real numbers except those values. The
+vertical asymptotes are <span class="math inline">\(x=4\)</span> and
+<span class="math inline">\(x=-4\)</span> because there is no canceling.
+By HA rule #2 above, the HA is x=1. The <span
+class="math inline">\(y\)</span>-intercept is <span
+class="math inline">\(y=R(0)=\frac{-6}{16}=\frac 38\)</span>. The <span
+class="math inline">\(x\)</span>-intercepts can the be found by solving
+<span class="math inline">\((x-3)(x-+2)=0\)</span>. This gives the
+solutions <span class="math inline">\(x=3\)</span> and <span
+class="math inline">\(x=2\)</span>, which are the VAs.</p>
+</body>
+</html>

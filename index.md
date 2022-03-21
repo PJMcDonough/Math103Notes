@@ -1,6 +1,6 @@
 % Notes For Math 105
 % Patrick McDonough for Prof. West
-% Last Updated: Mon Mar  7 16:15:54 PST 2022
+% Last Updated: Mon Mar 21 11:52:33 PDT 2022
 
 <ol start=0>
 
@@ -20,3 +20,5 @@
 <li> [ Upcoming Test](13test.html)
 <li> [ Remainder Theorem](14remthm.html)
 <li> [ Exam Prep](15prep.html)
+<li> [ Logistics of the class](16logisitcs.html)
+<li> [ Rational Funcionts (§3.7)](17rationalfn.html)
