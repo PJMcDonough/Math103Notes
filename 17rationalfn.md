@@ -37,7 +37,7 @@ R(x)=\frac{x+2}{x^2-4}\\
 R(x)=\frac{x+2}{(x+2)(x-2)} \text{Restrictions $x\ne \pm 2$}\\
 R(x)=\frac{1}{x-2}\\
 \end{align}$$
-So,the equation of the VA is $x=2$, and we have a removable discontinutiy (i.e., a hole in the graph) at $x=-2$.
+So,the equation of the VA is $x=2$, and we have a removable discontinuity (i.e., a hole in the graph) at $x=-2$.
 The VA and HA divide the plane into four parts.
 You can plug in test values of $x$ on each side of the VA, and then note that it will usually hug both sides.
 We can check to see if the function goes through the line $x=k$, we can simply solve $R(x)=k$.
