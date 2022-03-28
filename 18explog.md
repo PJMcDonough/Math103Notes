@@ -119,8 +119,93 @@ b&= \sqrt[4]{\frac 16}\\
 
 We get that $b$ is approximately $.6389$ and we can substitute to find $a$ is approximately $2.4492$.
 
+**Most Important Lesson From This Class:** Because of the way exponentials work, when you start saving matters *much* more than when you stop saving.
+
+## $e^x$
+Recall the compound intrest formula, and take $P,t=1$.
+Then we have $A=(1+\frac 1n)^n$.
+For $n=1$, we have $A=(1+\frac 11)^1=2$.
+For $n=2$, we have $A=(1+\frac 12)^2=2.25$.
+Larger $n$ results in a larger number.
+If you imagine graphing this, there is a vertical asymptote at $e$.
+We say that this approaches $e$.
+
+The constant $e$ is very important in lots of different parts of math.
+
+There is a famous theorem that $e^{i\pi}+1=0$ which is rather profound.
+
+## Graphing
+
 Transformation techniques work just as well for exponential functions as for the other functions we covered.
 Putting a negative sign on the $x$ flips the graph horizontally.
-Exponentialls have an interesting property, that the verticall streach is the initial value or equivilenty the $y$-intercept.
+Exponentials have an interesting property, that the vertical stretch is the initial value or equivalently the $y$-intercept.
 
-**Most Important Lesson From This Class:** Because of the way exponentials work, when you start saving matters *much* more than when you stop saving.
+Consider $f(x)=ab^{x+c}+d$. 
+The constant $a$ stretches, vertically, and if negative flips vertically, $b$ controls the rate of growth ($b>1$) or decay ($b<1$), $c$ shifts to the left, and $d$ shifts up.
+See Mr. West's Desmos graph tool. 
+
+**Example** (6 in book): Give an exponential with base $e$ stretched vertically by a factor of 2, flipped across the $y$-axis and shifted up 3.
+This gives the solution $f(x)=2e^{-x}+3$ when we substitute into the previous formula and recalled how to flip across the $y$-axis.
+
+You should be able to prove to yourself that $b^{-x} = \left(\frac 1b\right)^x$
+
+# Logarithmic Functions (§4.3)
+
+Note that all exponential functions are one-to-one.
+In other words, they pass the horizontal line test.
+All one-to-one functions have inverse "undoing" functions.
+
+Recall that to find an inverse $f^{-1}(x)$ of $f(x)$.
+
+1. Change $f(x)$ to $y$.
+2. Swap $x$ and $y$.
+3. Solve for $y$.
+4. Change $y$ to $f^{-1}(x)$
+
+Let's do this with exponential functions.
+Let $f(x)=2^x$.
+
+1. $y=2^x$
+2. $x=2^y$
+3. The best we could do with our level of knowledge is just to say $y=$ The exponent to which you raise the base $2$ in order to get $x$. We just described the inverse function of the exponential function. We call this function $log_2(x)$. More generally, we can talk bout $log_b(x)$.
+4. $f^{-1}(x)=\log_2(x)$
+
+**Example:** What's $\log_2(8)$. In other words, by applying the definition given in step 3, what is the exponent to which you raise the base $2$ in order to get $8$. 
+We can see that it is $3$ because $2^3=8$.
+
+Note that more generally $y=\log_b(x)$ if and only if $b^y=x$.
+This is the "mother of all $\log$ identities".
+
+Logs are inverse functions for exponentials.
+When we find inverses, we swap the $x$s and $y$s.
+The domain of an exponential is the range of the corresponding logarithm and vice versa.
+The domain of an exponential is all real numbers i.e., $(-\infty,\infty)$, and the range is all positive numbers i.e., $(0,\infty)$.
+The domain of a log is $(0,\infty)$, and the range is $(-\infty,\infty)$.
+
+**Example:** convert to exponential
+
+1. $\log_6(\sqrt 6)=\frac 12$. So, $\sqrt 6 = 6^{\frac 12}$.
+2. $log_3(9)=2$. So, $3^2=9$.
+
+
+**Example:** convert to $\log$ equation
+
+1. $5^3=125$. So, $log_5(125)=3$.
+2. $10^{-4}=\frac 1{10000}$. So, $\log_{10}(\frac 1{10000}=-4$ which makes sense because $\log_{10}(10000)=4$
+
+In this class, as well as in the financial and engineering fields, when we write $\log$ without a base, we mean $\log_{10}$.
+Confusingly in other subjects like analysis of algorithms, $\log$ means $\log_2$.
+You will also see $\log_e$ written $\ln$.
+Also confusingly, in other classes you may also see *this* written $\log$.
+
+**Example:** There was an earthquake in Northridge in 1993.
+It was 500 times more powerful than a 4.0 earthquake. 
+Earthquakes are measured in a base-10 exponential scale.
+Use this fact $10^x=500$ where $x$ is the difference in magnitude.
+We then know that $x=\log(500)$.
+This is approximately $2.7$.
+Therefore, it was approximately a $6.7$ magnitude earthquake.
+
+## Graphing
+Since they are inverses, a logarithmic function is an exponential reflected across $y=x$.
+Note that, even with the restriction on domain, $f(x)=-\log(x)$ reflects over the $y$-axis.

@@ -297,14 +297,143 @@ b&amp;= \sqrt[4]{\frac 16}\\
 <span class="math inline">\(.6389\)</span> and we can substitute to find
 <span class="math inline">\(a\)</span> is approximately <span
 class="math inline">\(2.4492\)</span>.</p>
-<p>Transformation techniques work just as well for exponential functions
-as for the other functions we covered. Putting a negative sign on the
-<span class="math inline">\(x\)</span> flips the graph horizontally.
-Exponentialls have an interesting property, that the verticall streach
-is the initial value or equivilenty the <span
-class="math inline">\(y\)</span>-intercept.</p>
 <p><strong>Most Important Lesson From This Class:</strong> Because of
 the way exponentials work, when you start saving matters <em>much</em>
 more than when you stop saving.</p>
+<h2 id="ex"><span class="math inline">\(e^x\)</span></h2>
+<p>Recall the compound intrest formula, and take <span
+class="math inline">\(P,t=1\)</span>. Then we have <span
+class="math inline">\(A=(1+\frac 1n)^n\)</span>. For <span
+class="math inline">\(n=1\)</span>, we have <span
+class="math inline">\(A=(1+\frac 11)^1=2\)</span>. For <span
+class="math inline">\(n=2\)</span>, we have <span
+class="math inline">\(A=(1+\frac 12)^2=2.25\)</span>. Larger <span
+class="math inline">\(n\)</span> results in a larger number. If you
+imagine graphing this, there is a vertical asymptote at <span
+class="math inline">\(e\)</span>. We say that this approaches <span
+class="math inline">\(e\)</span>.</p>
+<p>The constant <span class="math inline">\(e\)</span> is very important
+in lots of different parts of math.</p>
+<p>There is a famous theorem that <span
+class="math inline">\(e^{i\pi}+1=0\)</span> which is rather
+profound.</p>
+<h2 id="graphing">Graphing</h2>
+<p>Transformation techniques work just as well for exponential functions
+as for the other functions we covered. Putting a negative sign on the
+<span class="math inline">\(x\)</span> flips the graph horizontally.
+Exponentials have an interesting property, that the vertical stretch is
+the initial value or equivalently the <span
+class="math inline">\(y\)</span>-intercept.</p>
+<p>Consider <span class="math inline">\(f(x)=ab^{x+c}+d\)</span>. The
+constant <span class="math inline">\(a\)</span> stretches, vertically,
+and if negative flips vertically, <span class="math inline">\(b\)</span>
+controls the rate of growth (<span
+class="math inline">\(b&gt;1\)</span>) or decay (<span
+class="math inline">\(b&lt;1\)</span>), <span
+class="math inline">\(c\)</span> shifts to the left, and <span
+class="math inline">\(d\)</span> shifts up. See Mr. West’s Desmos graph
+tool.</p>
+<p><strong>Example</strong> (6 in book): Give an exponential with base
+<span class="math inline">\(e\)</span> stretched vertically by a factor
+of 2, flipped across the <span class="math inline">\(y\)</span>-axis and
+shifted up 3. This gives the solution <span
+class="math inline">\(f(x)=2e^{-x}+3\)</span> when we substitute into
+the previous formula and recalled how to flip across the <span
+class="math inline">\(y\)</span>-axis.</p>
+<p>You should be able to prove to yourself that <span
+class="math inline">\(b^{-x} = \left(\frac 1b\right)^x\)</span></p>
+<h1 id="logarithmic-functions-4.3">Logarithmic Functions (§4.3)</h1>
+<p>Note that all exponential functions are one-to-one. In other words,
+they pass the horizontal line test. All one-to-one functions have
+inverse “undoing” functions.</p>
+<p>Recall that to find an inverse <span
+class="math inline">\(f^{-1}(x)\)</span> of <span
+class="math inline">\(f(x)\)</span>.</p>
+<ol type="1">
+<li>Change <span class="math inline">\(f(x)\)</span> to <span
+class="math inline">\(y\)</span>.</li>
+<li>Swap <span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>.</li>
+<li>Solve for <span class="math inline">\(y\)</span>.</li>
+<li>Change <span class="math inline">\(y\)</span> to <span
+class="math inline">\(f^{-1}(x)\)</span></li>
+</ol>
+<p>Let’s do this with exponential functions. Let <span
+class="math inline">\(f(x)=2^x\)</span>.</p>
+<ol type="1">
+<li><span class="math inline">\(y=2^x\)</span></li>
+<li><span class="math inline">\(x=2^y\)</span></li>
+<li>The best we could do with our level of knowledge is just to say
+<span class="math inline">\(y=\)</span> The exponent to which you raise
+the base <span class="math inline">\(2\)</span> in order to get <span
+class="math inline">\(x\)</span>. We just described the inverse function
+of the exponential function. We call this function <span
+class="math inline">\(log_2(x)\)</span>. More generally, we can talk
+bout <span class="math inline">\(log_b(x)\)</span>.</li>
+<li><span class="math inline">\(f^{-1}(x)=\log_2(x)\)</span></li>
+</ol>
+<p><strong>Example:</strong> What’s <span
+class="math inline">\(\log_2(8)\)</span>. In other words, by applying
+the definition given in step 3, what is the exponent to which you raise
+the base <span class="math inline">\(2\)</span> in order to get <span
+class="math inline">\(8\)</span>. We can see that it is <span
+class="math inline">\(3\)</span> because <span
+class="math inline">\(2^3=8\)</span>.</p>
+<p>Note that more generally <span
+class="math inline">\(y=\log_b(x)\)</span> if and only if <span
+class="math inline">\(b^y=x\)</span>. This is the “mother of all <span
+class="math inline">\(\log\)</span> identities”.</p>
+<p>Logs are inverse functions for exponentials. When we find inverses,
+we swap the <span class="math inline">\(x\)</span>s and <span
+class="math inline">\(y\)</span>s. The domain of an exponential is the
+range of the corresponding logarithm and vice versa. The domain of an
+exponential is all real numbers i.e., <span
+class="math inline">\((-\infty,\infty)\)</span>, and the range is all
+positive numbers i.e., <span class="math inline">\((0,\infty)\)</span>.
+The domain of a log is <span class="math inline">\((0,\infty)\)</span>,
+and the range is <span
+class="math inline">\((-\infty,\infty)\)</span>.</p>
+<p><strong>Example:</strong> convert to exponential</p>
+<ol type="1">
+<li><span class="math inline">\(\log_6(\sqrt 6)=\frac 12\)</span>. So,
+<span class="math inline">\(\sqrt 6 = 6^{\frac 12}\)</span>.</li>
+<li><span class="math inline">\(log_3(9)=2\)</span>. So, <span
+class="math inline">\(3^2=9\)</span>.</li>
+</ol>
+<p><strong>Example:</strong> convert to <span
+class="math inline">\(\log\)</span> equation</p>
+<ol type="1">
+<li><span class="math inline">\(5^3=125\)</span>. So, <span
+class="math inline">\(log_5(125)=3\)</span>.</li>
+<li><span class="math inline">\(10^{-4}=\frac 1{10000}\)</span>. So,
+<span class="math inline">\(\log_{10}(\frac 1{10000}=-4\)</span> which
+makes sense because <span
+class="math inline">\(\log_{10}(10000)=4\)</span></li>
+</ol>
+<p>In this class, as well as in the financial and engineering fields,
+when we write <span class="math inline">\(\log\)</span> without a base,
+we mean <span class="math inline">\(\log_{10}\)</span>. Confusingly in
+other subjects like analysis of algorithms, <span
+class="math inline">\(\log\)</span> means <span
+class="math inline">\(\log_2\)</span>. You will also see <span
+class="math inline">\(\log_e\)</span> written <span
+class="math inline">\(\ln\)</span>. Also confusingly, in other classes
+you may also see <em>this</em> written <span
+class="math inline">\(\log\)</span>.</p>
+<p><strong>Example:</strong> There was an earthquake in Northridge in
+1993. It was 500 times more powerful than a 4.0 earthquake. Earthquakes
+are measured in a base-10 exponential scale. Use this fact <span
+class="math inline">\(10^x=500\)</span> where <span
+class="math inline">\(x\)</span> is the difference in magnitude. We then
+know that <span class="math inline">\(x=\log(500)\)</span>. This is
+approximately <span class="math inline">\(2.7\)</span>. Therefore, it
+was approximately a <span class="math inline">\(6.7\)</span> magnitude
+earthquake.</p>
+<h2 id="graphing-1">Graphing</h2>
+<p>Since they are inverses, a logarithmic function is an exponential
+reflected across <span class="math inline">\(y=x\)</span>. Note that,
+even with the restriction on domain, <span
+class="math inline">\(f(x)=-\log(x)\)</span> reflects over the <span
+class="math inline">\(y\)</span>-axis.</p>
 </body>
 </html>
