@@ -1,6 +1,6 @@
 % Notes For Math 105
 % Patrick McDonough for Prof. West
-% Last Updated: Mon Mar 28 12:08:29 PDT 2022
+% Last Updated: Mon Apr  4 12:17:15 PDT 2022
 
 <ol start=0>
 
@@ -23,3 +23,4 @@
 <li> [ Logistics of the class](16logisitcs.html)
 <li> [ Rational Funcionts (§3.7)](17rationalfn.html)
 <li> [ Exponential and logarithmic Function's (Chapter 4)](18explog.html)
+<li> [ Trigonometry (Chapter 5)](19trig.html)

@@ -1,6 +1,6 @@
 % Exponential and logarithmic Function's (Chapter 4)
 % Patrick McDonough for Prof. West
-% 2022-03-23
+% 2022-03-23 -- 2022-03-23
 
 ## But first some other things
 **Example:** Consider the following radical equation $\sqrt{x+1}+1=x$.
@@ -209,3 +209,180 @@ Therefore, it was approximately a $6.7$ magnitude earthquake.
 ## Graphing
 Since they are inverses, a logarithmic function is an exponential reflected across $y=x$.
 Note that, even with the restriction on domain, $f(x)=-\log(x)$ reflects over the $y$-axis.
+
+#Logs
+## Domain and Range (§4.4)
+The domain of exponential functions is all real numbers. The range is $(0,\infty), the positive numbers.
+
+The domain of $log_b(x)$ is $(0,\infty)$, the positive numbers.
+
+We have to do algebra to find the domain of $\log_2(6-3x)$.
+We solve 
+
+$$\begin{align}
+6-3x&>0
+-3x&>6
+x&<2
+\end{align}$$
+
+Remember to flip the $>$ on the last step when we devide by a negative number becuase
+$$\begin{align}
+-3x>6
+0>3x-6
+6>3x
+2>x
+x<2
+\end{align}$$
+
+This proof of the flipping thing is, in my view remarkably beautiful.
+
+We can use set-builder notation to write the domain as $\{x\vert x<2\}$
+Note that negative $x$-values are OK here because it's the argument of the log that we care about..
+
+## Graphing (§4.4)
+Remember that you can use the origami method and reflect a function about $y=x$ to get its inverse by folding.
+In Desmos, and math more generally, we can do this by swapping $x$ and $y$.
+Also in Desmos, in the functions menu, below the calculus, there is a function for log to an arbitrary base.
+This can also be typed as `log_2`.
+The underscore character `_` is typed like a dash `-` (to the right of 0), but you have to hold shift.
+
+All the shifting operations work as usual.
+The professor provides some demonstrations of this.
+
+In reality, we when we want to build something we don't usually need perfect answers.
+Three decimal places is usually enough, and the inputs are frequently less precise than that.
+This makes solving things by graphing make sense.
+
+Say we want to solve $4\ln(x)+1=-2\ln(x-1)$.
+We might as well solve this by graphing because the algebraic solution is incredibly complicated. 
+Graph the LHS and the RHS. 
+The $x$-value of their intersection is the solution.
+When two roads cross, we call that an intersection.
+The same is true of two curves.
+
+## Properties of logarithms (§4.5)
+There are an unlimited number of log identities, but remembering these is usually enough to make your life continent.
+Most of the rest can be derived from these relatively easily.
+When I say "iff", that means "if and only if" or equivalently that the two statement are equivalent.
+
+The mother of all log identities is the definition of $log_b$: $y=log_b(x)$ iff $b^y=x$.
+
+The identity $\log_b(MN)=\log_b(M)+log_b(N)$ is useful. We prove it here. 
+Let $P=\log_b(M)$. Let $Q=\log_b(N)$.
+So, by MOALI $b^P=M$ and $b^Q=N$.
+By substitution, and then further algebra, then more substitution,
+$$\log_b(MN)=\log_b(b^Pb^Q)=\log_b(b^{P+Q})=P+Q=\log_b(M)+\log_b(N)$$
+For example $\log_2(4\cdot 8)=\log_2(4)+\log_2(8)$
+Not having to the multiplication makes simplifying this to $5$ easier, especially because most people don't know $2^5=32$.
+
+
+Another nice identity is $\log_b(M^P)=P\log_b(M)$.
+This is probably the second most important log identity.
+This is not surprising given that by the preceding rule, $\log_b(M^2)=\log_b(M\cdot M)=\log_b(M)+ \log_b(M)=2\log_b(M)$.
+
+Finally, we have the identity given by the following proof using the previously mentioned log identities and some algebra.
+$$\log_b\left(\frac MN\right)=\log_b(MN^{-1})=\log_b(M)+\log_b(N^{-1})=\log_b(M)-\log_b(N)$$
+
+The change of base formula is $\log_b(M)=\frac{\log_a(M)}{\log_a(b)}$.
+The constant $a$ is the base we want to convert to, and $b$ is the base we have to convert from.
+Using slightly different notation and taking $a=e$ and $a=10$ gives the formulas $\log_b(M)=\frac{\ln(M)}{\ln(b)}$ and $\log_b(M)=\frac{log(M)}{log(b)}$ 
+
+We also have the one-to-one property that $b^s=b^t$ iff $s=t$.
+
+## Expanding and Condensing Logs
+**Example:** Expand 
+$$\ln\left(\frac{x^4y}{7}\right)$$
+
+*Solution:* By our final identity we get that this is $\ln(x^4y)-ln(7)$.
+We can further simplify this by the first and second identities to $\ln(x^4)+ln(y)-y=4\ln(x)+ln(y)-y$
+
+**Example:** Condense $log_3(5)+log_3(8)-log_3(2)$
+
+*Solution:* By similar reasoning, and some arithmetic simplification we get $\log_3(20)$
+
+**Example:** Condense to a single logarithm $log_2(x^2)+\frac 12 \log_2(x-1)-3\log_2(x+3)^2$
+
+*Solution:* 
+$$\begin{align}
+&\log_2(x^2)+\frac 12 \log_2(x-1)-3\log_2(x+3)^2\\
+&=\log_2(x^2)+\log_2(x-1)^{\frac 12} -\log_2((x+3)^2)^3\\
+&=\log_2(x^2)+\log_2sqrt{x-1} -\log_2((x+3)^6)\\
+&=\log_2(x^2sqrt{x-1}) -\log_2((x+3)^6)\\
+&=\log_2\left(\frac{x^2sqrt{x-1}} {(x+3)^6}\right)\\
+\end{align$$
+
+# Exponential and logarithmic equations (§4.6)
+We should plug our answers back in to check that we didn't make any mistakes, but I omit that here.
+
+**Example:** Remember that when we divide we subtract exponents because we can cancel.
+$$\begin{align}
+3^{4x-7}&=\frac{3^{2x}}3\\
+3^{4x-7}&=\frac{3^{2x}}{3^1}\\
+3^{4x-7}&=3^{2x}3^{-1}\\
+3^{4x-7}&=3^{2x-1}\\
+4x-7&=2x-1\\
+4x&=2x+6\\
+2x&=6\\
+x&=3
+\end{align}$$
+
+**Example:**
+$$\begin{align}
+32&=4^{x-2}\\
+2^5&=\left(2^2\right)^{x-2}\\
+2^5&=2^{2(x-2)}\\
+5&=2(x-2)\\
+5&=2x-4\\
+9&=2x\\
+\frac 92&=x
+\end{align}$$
+
+**Example:** Now we need logarithms. Recall $\log_bM^P=P\log_bM$. The professor used $\log_{10}$. We use $\ln$ here.
+$$\begin{align}
+3^{x+2}&=4^x\\
+\ln 3^{x+2}&=\ln 4^x\\
+(x+2)\ln(3)&= x \ln(4)\\
+x\ln(3) +2\ln(3) &= x \ln(4)\\
+x\ln(3) -x\ln(4) &= -2 \ln(3)\\
+x(\ln(3)-\ln(4)) &= -2 \ln(3)\\
+x &= \frac{-2 \ln(3)}{\ln(3)-\ln(4)}\\
+x &= \frac{2 \ln(3)}{\ln(4)-\ln(3)}\\
+\end{align}$$
+
+**Example:** This kind of thing shows up in biology. We can do this simply by using the log identity $\log_bb^x=x$ with $b=e$.
+$$\begin{align}
+100&=20e^{2t}\\
+5&=e^{2t}\\
+\ln(5)&=2t\\
+t&=\frac 12 \ln(5)\\
+\end{align}$$
+*Hint*: don't use $\log_{10}. It takes longer and gives a less simplified answer.
+$$\begin{align}
+100&=20e^{2t}\\
+5&=e^{2t}\\
+\log(5)&=2t\log(e)\\
+t&=\frac 12 \frac{\log(5)}{\log(e)}\\
+\end{align}$$
+We can see that these answers are equivalent using the change of base formula, or by convincing yourself with your calculator.
+
+**Example:** Something like this will probably be on the test.
+$$\begin{align}
+\log_b(2)&\cong .301\\
+\log_b(3)&\cong .477\\
+\log_b(5)&\cong .699\\
+\end{align}$$
+What's $\log_b(\frac 9{10})$?
+*Solution:* $\log_b(\frac 9{10})= \log_b(9)-\log_b(10)= 2\log_b(3)-(\log_b(2)+\log_b(5))\cong -.046$
+
+**Example:** Something like this will be on the test.
+
+$$\begin{align}
+\log(x)+log(x+3)&=1\\
+\log\left(x(x+3)\right)&=1\\
+x(x+3)&=10\\
+x^2+3x-10&=0\\
+(x+5)(x-2)&=0\\
+x&=-5,2
+\end{align}$$
+But we have to reject $x=-5$ because $\log(-5)$ is undefined leaving the only solution as $x=2$.
+

@@ -5,7 +5,6 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Patrick McDonough for Prof. West" />
-  <meta name="dcterms.date" content="2022-03-23" />
   <title>Exponential and logarithmic Function’s (Chapter 4)</title>
   <style>
     html {
@@ -167,7 +166,7 @@
 <h1 class="title">Exponential and logarithmic Function’s (Chapter
 4)</h1>
 <p class="author">Patrick McDonough for Prof. West</p>
-<p class="date">2022-03-23</p>
+<p class="date">2022-03-23 – 2022-03-23</p>
 </header>
 <h2 id="but-first-some-other-things">But first some other things</h2>
 <p><strong>Example:</strong> Consider the following radical equation
@@ -435,5 +434,203 @@ reflected across <span class="math inline">\(y=x\)</span>. Note that,
 even with the restriction on domain, <span
 class="math inline">\(f(x)=-\log(x)\)</span> reflects over the <span
 class="math inline">\(y\)</span>-axis.</p>
+<p>#Logs ## Domain and Range (§4.4) The domain of exponential functions
+is all real numbers. The range is $(0,), the positive numbers.</p>
+<p>The domain of <span class="math inline">\(log_b(x)\)</span> is <span
+class="math inline">\((0,\infty)\)</span>, the positive numbers.</p>
+<p>We have to do algebra to find the domain of <span
+class="math inline">\(\log_2(6-3x)\)</span>. We solve</p>
+<p><span class="math display">\[\begin{align}
+6-3x&amp;&gt;0
+-3x&amp;&gt;6
+x&amp;&lt;2
+\end{align}\]</span></p>
+<p>Remember to flip the <span class="math inline">\(&gt;\)</span> on the
+last step when we devide by a negative number becuase <span
+class="math display">\[\begin{align}
+-3x&gt;6
+0&gt;3x-6
+6&gt;3x
+2&gt;x
+x&lt;2
+\end{align}\]</span></p>
+<p>This proof of the flipping thing is, in my view remarkably
+beautiful.</p>
+<p>We can use set-builder notation to write the domain as <span
+class="math inline">\(\{x\vert x&lt;2\}\)</span> Note that negative
+<span class="math inline">\(x\)</span>-values are OK here because it’s
+the argument of the log that we care about..</p>
+<h2 id="graphing-4.4">Graphing (§4.4)</h2>
+<p>Remember that you can use the origami method and reflect a function
+about <span class="math inline">\(y=x\)</span> to get its inverse by
+folding. In Desmos, and math more generally, we can do this by swapping
+<span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>. Also in Desmos, in the functions menu,
+below the calculus, there is a function for log to an arbitrary base.
+This can also be typed as <code>log_2</code>. The underscore character
+<code>_</code> is typed like a dash <code>-</code> (to the right of 0),
+but you have to hold shift.</p>
+<p>All the shifting operations work as usual. The professor provides
+some demonstrations of this.</p>
+<p>In reality, we when we want to build something we don’t usually need
+perfect answers. Three decimal places is usually enough, and the inputs
+are frequently less precise than that. This makes solving things by
+graphing make sense.</p>
+<p>Say we want to solve <span
+class="math inline">\(4\ln(x)+1=-2\ln(x-1)\)</span>. We might as well
+solve this by graphing because the algebraic solution is incredibly
+complicated. Graph the LHS and the RHS. The <span
+class="math inline">\(x\)</span>-value of their intersection is the
+solution. When two roads cross, we call that an intersection. The same
+is true of two curves.</p>
+<h2 id="properties-of-logarithms-4.5">Properties of logarithms
+(§4.5)</h2>
+<p>There are an unlimited number of log identities, but remembering
+these is usually enough to make your life continent. Most of the rest
+can be derived from these relatively easily. When I say “iff”, that
+means “if and only if” or equivalently that the two statement are
+equivalent.</p>
+<p>The mother of all log identities is the definition of <span
+class="math inline">\(log_b\)</span>: <span
+class="math inline">\(y=log_b(x)\)</span> iff <span
+class="math inline">\(b^y=x\)</span>.</p>
+<p>The identity <span
+class="math inline">\(\log_b(MN)=\log_b(M)+log_b(N)\)</span> is useful.
+We prove it here. Let <span class="math inline">\(P=\log_b(M)\)</span>.
+Let <span class="math inline">\(Q=\log_b(N)\)</span>. So, by MOALI <span
+class="math inline">\(b^P=M\)</span> and <span
+class="math inline">\(b^Q=N\)</span>. By substitution, and then further
+algebra, then more substitution, <span
+class="math display">\[\log_b(MN)=\log_b(b^Pb^Q)=\log_b(b^{P+Q})=P+Q=\log_b(M)+\log_b(N)\]</span>
+For example <span class="math inline">\(\log_2(4\cdot
+8)=\log_2(4)+\log_2(8)\)</span> Not having to the multiplication makes
+simplifying this to <span class="math inline">\(5\)</span> easier,
+especially because most people don’t know <span
+class="math inline">\(2^5=32\)</span>.</p>
+<p>Another nice identity is <span
+class="math inline">\(\log_b(M^P)=P\log_b(M)\)</span>. This is probably
+the second most important log identity. This is not surprising given
+that by the preceding rule, <span
+class="math inline">\(\log_b(M^2)=\log_b(M\cdot M)=\log_b(M)+
+\log_b(M)=2\log_b(M)\)</span>.</p>
+<p>Finally, we have the identity given by the following proof using the
+previously mentioned log identities and some algebra. <span
+class="math display">\[\log_b\left(\frac
+MN\right)=\log_b(MN^{-1})=\log_b(M)+\log_b(N^{-1})=\log_b(M)-\log_b(N)\]</span></p>
+<p>The change of base formula is <span
+class="math inline">\(\log_b(M)=\frac{\log_a(M)}{\log_a(b)}\)</span>.
+The constant <span class="math inline">\(a\)</span> is the base we want
+to convert to, and <span class="math inline">\(b\)</span> is the base we
+have to convert from. Using slightly different notation and taking <span
+class="math inline">\(a=e\)</span> and <span
+class="math inline">\(a=10\)</span> gives the formulas <span
+class="math inline">\(\log_b(M)=\frac{\ln(M)}{\ln(b)}\)</span> and <span
+class="math inline">\(\log_b(M)=\frac{log(M)}{log(b)}\)</span></p>
+<p>We also have the one-to-one property that <span
+class="math inline">\(b^s=b^t\)</span> iff <span
+class="math inline">\(s=t\)</span>.</p>
+<h2 id="expanding-and-condensing-logs">Expanding and Condensing
+Logs</h2>
+<p><strong>Example:</strong> Expand <span
+class="math display">\[\ln\left(\frac{x^4y}{7}\right)\]</span></p>
+<p><em>Solution:</em> By our final identity we get that this is <span
+class="math inline">\(\ln(x^4y)-ln(7)\)</span>. We can further simplify
+this by the first and second identities to <span
+class="math inline">\(\ln(x^4)+ln(y)-y=4\ln(x)+ln(y)-y\)</span></p>
+<p><strong>Example:</strong> Condense <span
+class="math inline">\(log_3(5)+log_3(8)-log_3(2)\)</span></p>
+<p><em>Solution:</em> By similar reasoning, and some arithmetic
+simplification we get <span
+class="math inline">\(\log_3(20)\)</span></p>
+<p><strong>Example:</strong> Condense to a single logarithm <span
+class="math inline">\(log_2(x^2)+\frac 12
+\log_2(x-1)-3\log_2(x+3)^2\)</span></p>
+<p><em>Solution:</em> <span class="math display">\[\begin{align}
+&amp;\log_2(x^2)+\frac 12 \log_2(x-1)-3\log_2(x+3)^2\\
+&amp;=\log_2(x^2)+\log_2(x-1)^{\frac 12} -\log_2((x+3)^2)^3\\
+&amp;=\log_2(x^2)+\log_2sqrt{x-1} -\log_2((x+3)^6)\\
+&amp;=\log_2(x^2sqrt{x-1}) -\log_2((x+3)^6)\\
+&amp;=\log_2\left(\frac{x^2sqrt{x-1}} {(x+3)^6}\right)\\
+\end{align\]</span></p>
+<h1 id="exponential-and-logarithmic-equations-4.6">Exponential and
+logarithmic equations (§4.6)</h1>
+<p>We should plug our answers back in to check that we didn’t make any
+mistakes, but I omit that here.</p>
+<p><strong>Example:</strong> Remember that when we divide we subtract
+exponents because we can cancel. <span
+class="math display">\[\begin{align}
+3^{4x-7}&amp;=\frac{3^{2x}}3\\
+3^{4x-7}&amp;=\frac{3^{2x}}{3^1}\\
+3^{4x-7}&amp;=3^{2x}3^{-1}\\
+3^{4x-7}&amp;=3^{2x-1}\\
+4x-7&amp;=2x-1\\
+4x&amp;=2x+6\\
+2x&amp;=6\\
+x&amp;=3
+\end{align}\]</span></p>
+<p><strong>Example:</strong> <span class="math display">\[\begin{align}
+32&amp;=4^{x-2}\\
+2^5&amp;=\left(2^2\right)^{x-2}\\
+2^5&amp;=2^{2(x-2)}\\
+5&amp;=2(x-2)\\
+5&amp;=2x-4\\
+9&amp;=2x\\
+\frac 92&amp;=x
+\end{align}\]</span></p>
+<p><strong>Example:</strong> Now we need logarithms. Recall <span
+class="math inline">\(\log_bM^P=P\log_bM\)</span>. The professor used
+<span class="math inline">\(\log_{10}\)</span>. We use <span
+class="math inline">\(\ln\)</span> here. <span
+class="math display">\[\begin{align}
+3^{x+2}&amp;=4^x\\
+\ln 3^{x+2}&amp;=\ln 4^x\\
+(x+2)\ln(3)&amp;= x \ln(4)\\
+x\ln(3) +2\ln(3) &amp;= x \ln(4)\\
+x\ln(3) -x\ln(4) &amp;= -2 \ln(3)\\
+x(\ln(3)-\ln(4)) &amp;= -2 \ln(3)\\
+x &amp;= \frac{-2 \ln(3)}{\ln(3)-\ln(4)}\\
+x &amp;= \frac{2 \ln(3)}{\ln(4)-\ln(3)}\\
+\end{align}\]</span></p>
+<p><strong>Example:</strong> This kind of thing shows up in biology. We
+can do this simply by using the log identity <span
+class="math inline">\(\log_bb^x=x\)</span> with <span
+class="math inline">\(b=e\)</span>. <span
+class="math display">\[\begin{align}
+100&amp;=20e^{2t}\\
+5&amp;=e^{2t}\\
+\ln(5)&amp;=2t\\
+t&amp;=\frac 12 \ln(5)\\
+\end{align}\]</span> <em>Hint</em>: don’t use $_{10}. It takes longer
+and gives a less simplified answer. <span
+class="math display">\[\begin{align}
+100&amp;=20e^{2t}\\
+5&amp;=e^{2t}\\
+\log(5)&amp;=2t\log(e)\\
+t&amp;=\frac 12 \frac{\log(5)}{\log(e)}\\
+\end{align}\]</span> We can see that these answers are equivalent using
+the change of base formula, or by convincing yourself with your
+calculator.</p>
+<p><strong>Example:</strong> Something like this will probably be on the
+test. <span class="math display">\[\begin{align}
+\log_b(2)&amp;\cong .301\\
+\log_b(3)&amp;\cong .477\\
+\log_b(5)&amp;\cong .699\\
+\end{align}\]</span> What’s <span class="math inline">\(\log_b(\frac
+9{10})\)</span>? <em>Solution:</em> <span
+class="math inline">\(\log_b(\frac 9{10})= \log_b(9)-\log_b(10)=
+2\log_b(3)-(\log_b(2)+\log_b(5))\cong -.046\)</span></p>
+<p><strong>Example:</strong> Something like this will be on the
+test.</p>
+<p><span class="math display">\[\begin{align}
+\log(x)+log(x+3)&amp;=1\\
+\log\left(x(x+3)\right)&amp;=1\\
+x(x+3)&amp;=10\\
+x^2+3x-10&amp;=0\\
+(x+5)(x-2)&amp;=0\\
+x&amp;=-5,2
+\end{align}\]</span> But we have to reject <span
+class="math inline">\(x=-5\)</span> because <span
+class="math inline">\(\log(-5)\)</span> is undefined leaving the only
+solution as <span class="math inline">\(x=2\)</span>.</p>
 </body>
 </html>
