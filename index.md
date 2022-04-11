@@ -1,6 +1,6 @@
 % Notes For Math 105
 % Patrick McDonough for Prof. West
-% Last Updated: Mon Apr  4 12:17:15 PDT 2022
+% Last Updated: Mon Apr 11 12:10:53 PDT 2022
 
 <ol start=0>
 
