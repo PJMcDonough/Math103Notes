@@ -128,7 +128,7 @@ As a practical mater, you can calculate the ratio of the height of some other ob
 Multiplying this by the length of the shadow the palm tree casts gives you its height.
 
 
-# Graphing
+# Graphing §6.1
 Like for other functions, we can make a table.
 The range $\sin$ and $cos$ is $[-1,1]$, so we should make sure that, at the right places, our sine and cosine graphs bounce off $y=\pm 1$.
 The $\sin$, $\cos$, and $\tan$ are periodic, meaning there values form a cycle.
@@ -141,9 +141,49 @@ The same logic applies to the other three trigonometric functions.
 Sketching your function before you label it can often result in nicer graphs.
 
 ##General Formula
-In $y=A\sin(Bx-C)+D$, we call $A$ the amplitude, and the output of the function goes up to $A$ and down to $-A$.
+In $y=A\sin(Bx-C)+D$, we call $\vert A\vert$ the amplitude, and the output of the function goes up to $\vert A\vert$ and down to $-\vert A\vert$.
 The period (how long it takes for the function to repeat) is given by $\frac{2pi}{\vert B\vert}$.
 The phase shift (P.S.) is given by $\frac CB$.
+
+## Example
+To graph $f(x)=-2\sin\left(\frac{\pi x}2\right)$, we first rewrite as  $f(x)=-2\sin\left(\frac{\pi}2x-0\right)$.
+The period is $\frac{2\pi}{\vert{\frac\pi 2}\vert}=4$.
+The amplitude is $2$.
+The phase shift is $\frac 0{\frac\pi 2}=0$.
+Now we can flip $\sin$ and lable the relevant points for each quarter period. We also include the $\pm$ amplitude points marks
+
+## Example
+To graph $f(x)=3\cos(x-\frac\pi 2)$, we note, the amplitude is $3$, and the period is $\frac{\frac \pi 2} 1=\frac \pi 2$.
+The phase shift is $\frac \pi 2$ to the right.
+We don't have to flip.
+After graphing $f(x)=3\cos(x)$, we have to shift.
+After doing this you should get the graph of f(x)=3\cos(x)$
+
+## Example 
+To graph $f(x)=2\sin(\frac\pi 2x+\pi)+3$ we note the following.
+The apmplitude is $2$.
+The period is $\frac{2\pi}{\frac\pi 2}=4$.
+The phase shift is $\frac{-\pi}{\frac\pi 2}=-2$.
+Note that this is negative because adding is the same as subtracting the negative version.
+The veritical shift is $3$.
+We don't have to flip.
+You will notice that, in the end, you get the graph of $f(x)=-2\sin(\frac\pi 2x))+3$.
+The maximum and minimum values will be $3\pm2$ which is $1$ and $5$.
+
+# Graphing Other Trigonometric Functions.
+Recall that when we graphed a rational function $R(x)=\frac{P(x)}{Q(x)}$ we solved $Q(x)=0$ to find the vertical asymptotes.
+Similarly, for the function $\tan\theta=\frac{\sin\theta}{\cos\theta}$, we have vertical asymptotes when $\cos\theta=0$.
+The period of $tan$ is $pi$.
+We have vertical asymptotes for every integer $k$ at $\pi k + \frac \pi 2$.
+It is frequently useful to remember that $\tan\pm\frac\pi 4=\pm 1$.
+Using this and our previous techniques, we can graph various transformations of $tan$.
+The in addition to to being the reciprocal of $tan$, $cot$ is like $tan$ but reflected and shifted.
+
+We can do something similar with $sec\theta=\frac 1{\cos\theta}$.
+Consider the graph of $cos$.
+By an argument like the one in the last paragraph, we can find that the asymptotes of $sec$ are the same as $tan$'s. 
+We can see that the low point of $cos$ is the high point of $sec$.
+By knowing this and the asymptotes, we can graph $sec$.
 
 # Final Project
 There will be a final project worth 5% of your grade.
