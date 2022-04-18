@@ -170,7 +170,7 @@ We don't have to flip.
 You will notice that, in the end, you get the graph of $f(x)=-2\sin(\frac\pi 2x))+3$.
 The maximum and minimum values will be $3\pm2$ which is $1$ and $5$.
 
-# Graphing Other Trigonometric Functions.
+## Graphing Other Trigonometric Functions.
 Recall that when we graphed a rational function $R(x)=\frac{P(x)}{Q(x)}$ we solved $Q(x)=0$ to find the vertical asymptotes.
 Similarly, for the function $\tan\theta=\frac{\sin\theta}{\cos\theta}$, we have vertical asymptotes when $\cos\theta=0$.
 The period of $tan$ is $pi$.
@@ -184,6 +184,29 @@ Consider the graph of $cos$.
 By an argument like the one in the last paragraph, we can find that the asymptotes of $sec$ are the same as $tan$'s. 
 We can see that the low point of $cos$ is the high point of $sec$.
 By knowing this and the asymptotes, we can graph $sec$.
+
+# Inverse Trigonometric Functions
+Recall that inverse means undoing.
+We learned how to solve exponential equations using inverse functions of the form $\log_b$.
+Similarly we invent the inverse trigonometric functions.
+These are only really inverses over restricted domains because, for example $sin(0)=\sin(2\pi)$, but that's fine because mathematicians just invent new rules when they're told they can't do something.
+When we restrict $\sin$ to $[-\frac\pi 2,\frac\pi 2]$ we can invert the function.
+We will normally write as $\arcsin$, but you will also see this written as $\sin^{-1}$.
+This does not mean $\frac 1\sin$ which we write $\csc$ even though we have the identity $x^{-1}=\frac 1x$.
+In other words, inverse and exponentiation are two very different things.
+
+We can do something similar with $\cos$, but we use the restriction $[0,\pi]$.
+This gives us $\arccos$ sometimes written $\cos^{-1}$.
+
+The $\arctan$ function is also useful, and has the same restriction as $\arcsin$, $[-\frac\pi 2,\frac\pi 2]$.
+
+**Example:** We can find that if $\sin(x)=.5$, then $x$ may be 30º. We can do this either using a unit circle or by computing $\arcsin.5$
+
+**Example:** Note that $\arccos(\cos(150º))=150º$, but surprisingly $\arcsin(\sin(150º))=30º$. 
+Similar examples can be found confusing where you can cancel both pairs of functions, only the second pair, or neither.
+
+A lot of these questions can be done using a calculator.
+You can also always use a unit circle and division to calculate tangents, and therefore inverse tangents.
 
 # Final Project
 There will be a final project worth 5% of your grade.
