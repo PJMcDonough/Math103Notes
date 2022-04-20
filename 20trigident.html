@@ -164,7 +164,7 @@
 <header id="title-block-header">
 <h1 class="title">Trigonometric identities</h1>
 </header>
-<h3 id="pythagorean-identities">Pythagorean identities</h3>
+<h2 id="pythagorean-identities">Pythagorean identities</h2>
 <p>Recall <span
 class="math inline">\(\sin^2\theta+\cos^2\theta=1\)</span>. By deviding
 by 1, <span class="math inline">\(\sin^2\theta\)</span>, and <span
@@ -178,13 +178,13 @@ class="math inline">\(1+\cot^2\theta=\csc^2\theta\)</span></li>
 <li><span
 class="math inline">\(\tan^2\theta+1=\sec^2\theta\)</span>.</li>
 </ul>
-<h3 id="even-odd-identities">Even-Odd identities</h3>
+<h2 id="even-odd-identities">Even-Odd identities</h2>
 <p>We have the odd-function trigonometric identities <span
 class="math inline">\(-\sin\theta=\sin(-\theta)\)</span> and <span
 class="math inline">\(-\tan\theta=\tan(-\theta)\)</span>. Additionally
 we have the even-function identity <span
 class="math inline">\(\cos\theta=\cos(-\theta)\)</span></p>
-<h3 id="example">Example</h3>
+<h4 id="example">Example</h4>
 <p>Show that <span
 class="math inline">\(\tan\theta\cos\theta=\sin\theta\)</span> where
 <span class="math inline">\(\tan\theta\)</span> is defined. There are
@@ -194,7 +194,7 @@ many ways to show this, like any other trig identity.</p>
 \tan\theta\cos\theta&amp;=\frac{\sin\theta}{\cos\theta}\cos\theta\\
 \tan\theta\cos\theta&amp;=\sin\theta\\
 \end{align}\]</span></p>
-<h3 id="example-1">Example</h3>
+<h4 id="example-1">Example</h4>
 <p>Show that <span
 class="math inline">\(\frac{\sec^2\theta-1}{\sec^2\theta}=\sin^2\theta\)</span>
 where defined. One strategy here is to convert everything to sines and
@@ -214,5 +214,75 @@ class="math display">\[\begin{align}
 &amp;=\frac{\sin^2\theta}{\cos^2\theta}\cos^2\theta\\
 &amp;=\sin^2\theta\\
 \end{align}\]</span></p>
+<h4 id="example-2">Example</h4>
+<p>The first step of each solution follows by the Pythagorean
+identities.</p>
+<p><em>Solution 1:</em> <span class="math display">\[\begin{align}
+&amp;(1-\cos^2x)(1+\cot^2x)\\
+&amp;=\sin^2x\csc^2x\\
+&amp;=\frac{\sin^2x}{\sin^2x}\\
+&amp;=1
+\end{align}\]</span></p>
+<p><em>Solution 2:</em> <span class="math display">\[\begin{align}
+&amp;(1-\cos^2x)(1+\cot^2x)\\
+&amp;=\sin^2x(1+\frac{\cos^2x}{\sin^2x})\\
+&amp;=\sin^2x+\sin^2x\frac{\cos^2x}{\sin^2x}\\
+&amp;=\sin^2x+\cos^2x\\
+&amp;=1
+\end{align}\]</span></p>
+<h4 id="example-3">Example</h4>
+<p>To solve <span
+class="math inline">\(\cos^2\theta-\cos^2\theta=0\)</span>, let <span
+class="math inline">\(c=\cos^2\theta\)</span>, we resulting in a simple
+quadratic <span class="math inline">\(c^2-x-2=0\)</span>. So <span
+class="math inline">\((c-2)(c+1)=0\)</span>. Because the output of the
+<span class="math inline">\(\cos\)</span> function can never be <span
+class="math inline">\(2\)</span>, we know <span
+class="math inline">\(cos\theta=-1\)</span>. So the solutions are, for
+integer <span class="math inline">\(k\)</span>, <span
+class="math inline">\(\theta=2\pi k+\pi\)</span>.</p>
+<p>This will likely be on the test</p>
+<h4 id="example-4">Example</h4>
+<p>We show <span class="math display">\[\begin{align}
+\frac{\cos\theta}{1+\sin\theta}&amp;=\frac{1-\sin\theta}{\cos\theta}
+\cos^2\theta&amp;=(1-\sin\theta)(1+\sin\theta)
+\cos^2\theta&amp;=1-\sin^2\theta
+\sin^2\theta+\cos^2\theta=1
+\end{align}\]</span></p>
+<h2 id="sum-and-difference-identities-7.2">Sum and Difference Identities
+(§ 7.2)</h2>
+<p>The proof of these is on page 571 of the PDF version of the proof.
+<span class="math display">\[\begin{align}
+\cos(\alpha+\beta)&amp;=\cos\alpha\cos\beta-\sin\alpha\sin\beta\\
+\cos(\alpha-\beta)&amp;=\cos\alpha\cos\beta+\sin\alpha\sin\beta\\
+\sin(\alpha+\beta)&amp;=\sin\alpha\cos\beta+\cos\alpha\sin\beta\\
+\sin(\alpha-\beta)&amp;=\sin\alpha\cos\beta-\cos\alpha\sin\beta\\
+\end{align}\]</span></p>
+<h4 id="example-5">Example</h4>
+<p>To calculate <span class="math inline">\(\cos(105º)\)</span>, we
+calculate <span class="math inline">\(\cos(60+45)\)</span> using the
+unit circle and the above identity. This gives us <span
+class="math inline">\(\frac{1}{2}\frac{\sqrt 2}{2} - \frac{\sqrt
+3}{2}\frac{\sqrt 2}{2}=\frac 14(\sqrt 2 -\sqrt 6)\)</span>. Similarly we
+could compute <span class="math inline">\(\cos(150º-45º)\)</span> or
+<span class="math inline">\(\cos(135º-30º)\)</span>.</p>
+<p>Similarly, we could compute <span
+class="math inline">\(\sin(15º)=\sin(45º-30º)\)</span>.</p>
+<h2 id="double-angle-identities">Double Angle Identities</h2>
+<p>It turns out that <span
+class="math inline">\(\cos\theta=\sin(\frac\pi 2-\theta)\)</span>
+because, by the sum identity, <span class="math inline">\(\sin(\frac\pi
+2-\theta)=\sin\frac\pi 2\cos\theta-\cos\frac\pi 2\sin\theta\)</span>,
+which cancels and gives us the identity we want. Similarly <span
+class="math inline">\(\sin\theta=\cos(\frac\pi 2-\theta)\)</span>.</p>
+<p>By the sum identity for <span class="math inline">\(\sin\)</span> and
+some algebra, <span class="math inline">\(\sin
+2\theta=\sin(\theta+\theta)=2\sin\theta\cos\theta\)</span>. The sum
+identity for <span class="math inline">\(\cos\)</span> gives <span
+class="math inline">\(\cos 2\theta=\cos^2\theta-\sin^2\theta\)</span>,
+and the Pythagorean identity gives the alternate forms <span
+class="math inline">\(2\cos^2\theta-1\)</span> and <span
+class="math inline">\(1-2\sin^2\theta\)</span>.</p>
+<h2 id="half-angle-identities">Half Angle Identities</h2>
 </body>
 </html>
