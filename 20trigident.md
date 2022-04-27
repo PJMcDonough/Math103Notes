@@ -102,3 +102,28 @@ By the sum identity for $\sin$ and some algebra, $\sin 2\theta=\sin(\theta+\thet
 The sum identity for $\cos$ gives $\cos 2\theta=\cos^2\theta-\sin^2\theta$, and the Pythagorean identity gives the alternate forms $2\cos^2\theta-1$ and $1-2\sin^2\theta$.
 
 ## Half Angle Identities
+Consider the following proof.
+
+Recall the double angle identity $cos(2\theta)=\cos^2\theta-\sin^\theta$.
+We can use the Pythagorean identity to rewrite this in the alternate form $\cos 2\theta=1-2\sin^2\theta$.
+Algebra gives $\sin^2\theta=\frac 12-\frac 12\cos 2\theta$.
+Now, let $\alpha=\frac 12\theta$.
+Solving for $\sin\frac\alpha 2$ gives $\sin\frac\alpha 2 = \pm \sqrt{\frac 12 -\frac 12\cos\alpha}$.
+Note that here, $\pm$ indicates that one of the two values is correct.
+This is different from the use in the quadratic formula.
+
+Also note $\cos\frac\alpha 2 = \pm\sqrt{\frac 12 - \frac 12\cos\alpha}$.
+
+
+### Example 
+Find $\sin(15º)$.
+
+**Solution 1(review):** We can find 
+$$\sin(45º-30º)=\sin 45º\cos 30º- \cos 45º\sin 30=\frac {\sqrt 2} 2 \frac {\sqrt 3} 2 - \frac{\sqrt 2}2\frac 12=\frac 14(\sqrt 6-\sqrt 2)$$
+
+**Solution 2:**
+$$\sin 15º=\sin{\frac{30º}{2}}=\pm\sqrt{\frac {1}{2}-\frac {1}{2}\cos 30º}$=\pm\sqrt{\frac 12-\frac{\sqrt 3}4}=\pm\frac 12 \sqrt{2-\sqrt 3}$$ 
+
+We must then ignore the negative solution becuase we know what quadrant we are in.
+
+**Explanation:** We can show That these are the same algebraically. This is an extra credit assignment.
