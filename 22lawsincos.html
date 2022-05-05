@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Law of Sines and Law of Cosines (§§ 8.1–8.2)</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Law of Sines and Law of Cosines (§§ 8.1–8.2)</h1>
+</header>
+<h1 id="law-of-sines">Law of Sines</h1>
+<p>Consider a triangle with Angles <span
+class="math inline">\(A\)</span>, <span
+class="math inline">\(B\)</span>, and <span
+class="math inline">\(C\)</span>. We call the angles opposite a given
+side the lowercase version of that letter. In other words, the opposite
+angles are, respectively, <span class="math inline">\(a\)</span>, <span
+class="math inline">\(b\)</span>, and <span
+class="math inline">\(c\)</span>.</p>
+<p>Recall that the area of a triangle is the base times the hight
+divided by 2. You can prove this by bisecting an arbitrary
+parallelogram.</p>
+<p>In this case, we will take <span class="math inline">\(c\)</span> to
+be the base. The height can be found by drawing a line through point
+<span class="math inline">\(C\)</span> perpendicular to <span
+class="math inline">\(c\)</span>. We can then se that the height <span
+class="math inline">\(h=cb\sin A\)</span>. This gives the area <span
+class="math inline">\(\frac 12 cb\sin A\)</span>. The same argument with
+different variable names gives area as <span class="math inline">\(\frac
+12 ca\sin B=\frac 12 ba\sin C\)</span>.</p>
+<p>Dividing each of the expressions for the areas by <span
+class="math inline">\(\frac 12 abc\)</span> gives the law of sines:</p>
+<p><span class="math display">\[\frac{\sin A}{a}=\frac{\sin
+B}{b}=\frac{\sin C}{c}\]</span></p>
+<h3 id="example">Example</h3>
+<p>Consider a triangle with <span class="math inline">\(a=10\)</span>,
+<span class="math inline">\(A=50º\)</span>, and <span
+class="math inline">\(C=50º\)</span>. Solve the triangle (i.e., find all
+unknowns).</p>
+<p><strong>Solution</strong> <span
+class="math inline">\(B=180º-50º-30º=100º\)</span>. By the law of sines,
+and some algebra <span class="math display">\[c=\frac{\sin C}{\sin
+A}a=\frac{\sin 30º}{\sin 50º}10\]</span> <span
+class="math display">\[b=\frac{\sin B}{\sin A}a=\frac{\sin 100º}{\sin
+50º}10\]</span></p>
+<p>This comes out to about 6.53 and 12.86 respectively.</p>
+<h3 id="example-1">Example</h3>
+<p>Consider a triangle with <span class="math inline">\(C=85º\)</span>,
+<span class="math inline">\(c=12\)</span>, and <span
+class="math inline">\(b=9\)</span>. Solve the triangle (i.e., find all
+unknowns).</p>
+<p><strong>Solution:</strong> Left as an exercise for the reader.</p>
+<h3 id="example-2">Example</h3>
+<p>Consider a triangle with <span class="math inline">\(A=35º\)</span>,
+<span class="math inline">\(a=6\)</span>, and <span
+class="math inline">\(b=8\)</span>. Solve the triangle (i.e., find all
+unknowns).</p>
+<p><strong>Solution:</strong> $<span class="math inline">\(\sin B =
+\frac{b}{a} \sin A= \frac 86\sin 35º\)</span> Taking the <span
+class="math inline">\(B=\arcsin\sin B\)</span> is then aproximately
+<span class="math inline">\(49.89\)</span>, but we also need to consider
+the posibility <span class="math inline">\(B = 180º-\arcsin\sin
+B\)</span>, giving the solution of aproximately <span
+class="math inline">\(130.11\)</span>. Finding the remaining angles of
+both sets of solutions is left as an exercise for the reader.</p>
+<h2 id="note">Note</h2>
+<p>If you have to take an <span class="math inline">\(\arcsin\)</span>,
+then you need to consider all possible values, but note that some values
+will be inconstant with things we know about triangles, usually leaving
+just one or two solutions.</p>
+<h1 id="law-of-cosines">Law of Cosines</h1>
+<p>The law of cosines is</p>
+<p><span class="math display">\[ a^2 = b^2 +c^2 - 2bc\cos A
+\]</span></p>
+<p>There are a total of 6 forms of this which you can get by
+substitution, but up to commutativity of addition and multiplication,
+there are only 3.</p>
+<p>Note that the Pythagorean theorem is a special case of this.</p>
+<h3 id="example-3">Example</h3>
+<p>Consider a triangle with <span class="math inline">\(a=20\)</span>,
+<span class="math inline">\(b=18\)</span>, and <span
+class="math inline">\(b=25\)</span>. Solve the triangle (i.e., find all
+unknowns).</p>
+<p><strong>Solution</strong> Solving the law of cosines gives</p>
+<p><span class="math display">\[ A = \arcsin\frac
+{b^2+c^2-a^2}{2bc}\]</span></p>
+<p>We can do the same thing with each of the other angles. After that,
+we can add up all three angles and make sure we get 180º.</p>
+</body>
+</html>

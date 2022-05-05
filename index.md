@@ -1,6 +1,6 @@
 % Notes For Math 105
 % Patrick McDonough for Prof. West
-% Last Updated: Wed Apr 27 10:45:02 PDT 2022
+% Last Updated: Wed May  4 17:25:48 PDT 2022
 
 <ol start=0>
 
@@ -26,3 +26,4 @@
 <li> [ Trigonometry (Chapter 5)](19trig.html)
 <li> [ Trigonometric identities](20trigident.html)
 <li> [ Trigonometric equations (§7.5)](21trigeqn.html)
+<li> [ Law of Sines and Law of Cosines (§§ 8.1--8.2)](22lawsincos.html)
